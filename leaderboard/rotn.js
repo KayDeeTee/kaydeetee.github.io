@@ -724,7 +724,7 @@ function generate_leaderboards( json_objects ) {
 
 		for( s in lb.scores ){
 			var score = lb.scores[s]
-			console.log(score)
+			//console.log(score)
 
 			var trow = document.createElement("div")
 			trow.classList.add("table-row")
