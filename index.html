@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RotN Leaderboard</title>
+    <link rel="stylesheet" href="rotn.css">
+    <script type="text/javascript" src="rotn.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+  </head>
+  <body class="oxanium-bold" onload="listCharts()">   
+
+    <div class="flex-body">
+
+      <div class="dark sidebar">
+        <div> Track </div>
+        <select name="chart" id="chart" onchange="updateChart()" selected="RR-All" autocomplete="off">
+          <option value="RR-All">All</option>
+        </select>
+
+        <div class="sidebar-item"> Difficulty </div>
+        <form><select name="diff" id="diff" onchange="updateDifficulty()" selected="DiffImpossible">
+          <option value="Diff-All">All</option>
+          <option value="DiffEasy">Easy</option>
+          <option value="DiffMed">Medium</option>
+          <option value="DiffHard">Hard</option>
+          <option value="DiffImpossible" selected>Impossible</option>
+        </select></form>
+
+        <div class="sidebar-item"> Remix </div>
+        <select name="remix" id="remix" onchange="updateRemix()"  selected="NonRemix" autocomplete="off">
+          <option value="Remix-All">All</option>
+          <option value="NonRemix" selected>Normal</option>
+          <option value="Remix">Remix</option>
+          <option value="RemixSeeded">RemixSeeded</option>
+        </select>
+
+        <div class="sidebar-item"> Coda </div>
+        <select name="coda" id="coda" onchange="updateCoda()" selected="NonCoda" autocomplete="off">
+          <option value="Coda-All">All</option>
+          <option value="NonCoda" selected>Normal</option>
+          <option value="Coda">Coda</option>
+        </select>
+
+      </div>
+
+      <div class="dark main">
+        <div class="content-margin">
+
+          <div class="table-row table-head">
+            <div class="table-grid"> <div> Rank </div><div class="span-2"> Name </div><div class="span-2"> Score </div><div> Accuracy </div><div> Details </div> <div class="span-2"> Vibe Activations (Seconds) </div> </div>
+          </div>
+          <div class="table" id="leaderboard">
+            
+          </div>
+         
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>
