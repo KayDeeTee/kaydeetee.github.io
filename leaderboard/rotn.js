@@ -1040,7 +1040,9 @@ function repopulate_leaderboard(){
 			}
 		}
 	}
-
+	
+	var scount = document.getElementById("score_count")
+	scount.innerHTML = ""
 	var lb = document.getElementById("leaderboard")
 	lb.innerHTML = "";
 	//console.log( boards )
@@ -1102,6 +1104,9 @@ function listCharts(){
 function get_player_scores( json_objects, pid ){
 	var scores = []
 	var leaderboard_table = document.getElementById("leaderboard")
+	var scount = document.getElementById("score_count")
+	var count = 0
+	var player_name = ""
 	rows = 0
 	for( j in json_objects ){
 		var json = json_objects[j]
@@ -1112,9 +1117,14 @@ function get_player_scores( json_objects, pid ){
 				score.board = json.name
 				score.rank = s
 				scores.push( score )
+				player_name = score.player_name
+				count += 1
 			}
 		}
 	}
+
+	scount.innerHTML = ""
+	scount.appendChild( document.createTextNode( player_name + " has " + count + " scores" ) )
 
 	scores.sort( (a,b) => { return a.rank > b.rank } )
 
