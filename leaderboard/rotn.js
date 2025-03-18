@@ -1040,7 +1040,7 @@ function repopulate_leaderboard(){
 			}
 		}
 	}
-	
+
 	var scount = document.getElementById("score_count")
 	scount.innerHTML = ""
 	var lb = document.getElementById("leaderboard")
@@ -1089,11 +1089,20 @@ function listCharts(){
 
 	var e = document.getElementById("chart")
 
-	for( c in all_charts ){
-		var n = all_charts[c].name
+	var items = Object.keys(all_charts).map(function(key) {
+  		return [key, all_charts[key]];
+	});
+
+	items.sort(function(first, second) {
+  		return second[1].name < first[1].name;
+	});
+
+	for( i in items ){
+		item = items[i]
+		var n = item[1].name
 
 		var opt = document.createElement("option")
-		opt.value = c
+		opt.value = item[0]
 		var text = document.createTextNode(n);
 		opt.appendChild(text);
 		e.appendChild(opt);

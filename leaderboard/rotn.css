@@ -128,3 +128,27 @@ select{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+@media (max-aspect-ratio: 1/1){
+  .flex-body {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-self: stretch;
+    width: unset;
+  }
+  .sidebar div {
+    display: none;
+  }
+  .sidebar select {
+    flex: 1;
+    margin: 1px;
+  }
+  .main {
+    width: unset;
+  }
+}
