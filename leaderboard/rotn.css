@@ -80,6 +80,19 @@ select{
   height: 18pt;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.tooltip-underline {
+  margin-top: 8px;
+  border-bottom: 1px #ffffff40 solid;
+}
+
 .footer {
   min-height: 32px;
   line-height: 32px;
@@ -123,6 +136,7 @@ select{
   width: 100%;
   top: 100%;
   font-size: 11pt;
+  height: auto;
 }
 
 .tooltip:hover .tooltiptext {
@@ -139,7 +153,7 @@ select{
 
 .info-tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #000000B0;
+  background-color: #000000D0;
   color: #fff;
   text-align: left;
   position: absolute;
@@ -150,6 +164,10 @@ select{
   font-size: 11pt;
   padding: 8px;
   white-space: pre-line
+}
+
+.table-grid .tooltip .tooltip-top-override {
+  top: unset;
 }
 
 .info-tooltip:hover .tooltiptext {

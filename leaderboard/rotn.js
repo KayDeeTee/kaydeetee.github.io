@@ -677,7 +677,7 @@ var valid_boards = [
 "P_C_H_CD_RRCountFunkula",
 ]
 
-var last_update = "2025-03-18 00:54:35"
+var last_update = "2025-03-18 22:16:17"
 
 var all_charts = {
 	"RRDiscoDisaster":{ "name": "Disco Disaster"},
@@ -862,13 +862,37 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 	avg_small.appendChild( document.createTextNode( "."+avg_split[1] ) )
 	acc_table.appendChild( avg_small );
 
-	var acc_tooltip = document.createElement("span")
+	var acc_tooltip = document.createElement("div")
 	acc_tooltip.classList.add("tooltiptext")
+	acc_tooltip.classList.add("flex-col")
+	if( rows > 5 ){
+		acc_tooltip.classList.add("tooltip-top-override")
+	}
 
 	var tt_text = ""
-	tt_text = score.total_perfects + " | "+score.total_greats+" | "+score.total_goods+" | "+score.total_oks+" | "+score.total_misses
+	var tt_total = document.createElement("span")
+	tt_total.appendChild( document.createTextNode( score.total_perfects + " | "+score.total_greats+" | "+score.total_goods+" | "+score.total_oks+" | "+score.total_misses ) )
+	tt_total.classList.add("full-width")
+	acc_tooltip.appendChild( tt_total )
 
-	acc_tooltip.appendChild( document.createTextNode( tt_text ) )
+	for( imult in score.InputMults ){
+		var input_data = score.InputMults[imult]
+		var mult = input_data.mult
+
+		var tt_subheader = document.createElement("span")
+		
+		tt_subheader.appendChild( document.createTextNode( mult + "x" ) )
+		tt_subheader.classList.add("full-width")
+		tt_subheader.classList.add("small-text")
+		tt_subheader.classList.add("tooltip-underline")
+		acc_tooltip.appendChild( tt_subheader )
+
+		var tt_subdata = document.createElement("span")
+		tt_subdata.appendChild( document.createTextNode( input_data.perfects + " | "+input_data.greats+" | "+input_data.goods+" | "+input_data.oks+" | "+input_data.misses ) )
+		tt_subdata.classList.add("full-width")
+		acc_tooltip.appendChild( tt_subdata )
+	}
+
 	acc_table.appendChild( acc_tooltip )
 
 	tgrid.appendChild(acc_table)
@@ -1135,7 +1159,7 @@ function get_player_scores( json_objects, pid ){
 	scount.innerHTML = ""
 	scount.appendChild( document.createTextNode( player_name + " has " + count + " scores" ) )
 
-	scores.sort( (a,b) => { return a.rank > b.rank } )
+	scores.sort( (a,b) => { return Number(a.rank) > Number(b.rank) } )
 
 	leaderboard_table.innerHTML = ""
 	for( score in scores ){
