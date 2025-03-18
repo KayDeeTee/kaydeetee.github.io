@@ -723,6 +723,7 @@ function generate_leaderboards( json_objects ) {
 	if( json_objects.length == 1 ){
 		//just list scores
 		var lb = json_objects[0]
+		//console.log(lb)
 
 		for( s in lb.scores ){
 			var score = lb.scores[s]
@@ -873,7 +874,7 @@ function generate_leaderboards( json_objects ) {
 			if( score.cheated ){
 				flag = "CHEATED"
 			}
-			if( score.vibe_duration > score.vibes_hit * 5.5 ){
+			if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){
 				flag = "CHEATED"
 			}
 
