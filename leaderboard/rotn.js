@@ -717,6 +717,231 @@ var all_charts = {
 	"DLCApricot03":{ "name": "Bootus Bleez"},
 }
 
+function friendly_lb( lb_name ){
+	var lb_name = lb_name.slice(4)
+	var data = lb_name.split("_")
+	var diff = data[0]
+	var coda = false
+	var remix = false
+	var remix_seeded = false
+	if( data.includes("CD") ){
+		coda = true
+	}
+	if( data.includes("R") ){
+		remix = true
+	}
+	if( data.includes("RS") ){
+		remix_seeded = true
+	}
+	var chart = data[ data.length-1 ]
+	
+	var chart_name = all_charts[chart].name
+
+	if( diff == "E" ){ chart_name += " E"	}
+	if( diff == "M" ){ chart_name += " M"	}
+	if( diff == "H" ){ chart_name += " H"	}
+	if( diff == "X" ){ chart_name += " X"	}
+
+	if( remix ){ chart_name += " 🌀"}
+	if( remix_seeded ){ chart_name += " 🌱"}
+	if( coda ){ chart_name += " 🎯"}
+	return chart_name
+
+}
+
+function generate_row( leaderboard_table, score, rows, replace_name_with_board=false ){
+	var trow = document.createElement("div")
+	trow.classList.add("table-row")
+	if( rows % 2 == 0 ){
+		trow.classList.add("table-dark")
+	} else {
+		trow.classList.add("table-light")
+	}
+
+	var tgrid = document.createElement("div")
+	tgrid.classList.add("table-grid")
+
+	trow.appendChild(tgrid)
+
+	var rank = document.createElement("div")
+	rank.appendChild( document.createTextNode( Number(score.rank)+1 ) );
+	tgrid.appendChild(rank)
+
+	var pname = document.createElement("div")
+	pname.classList.add("span-2")
+	if( !replace_name_with_board ){ 
+		pname.classList.add("clickable")
+		pname.addEventListener('click', showPlayerDetails, false )
+		pname.player_id = score.player_id
+		pname.appendChild( document.createTextNode( score.player_name ) );
+	} else {
+		pname.appendChild( document.createTextNode( friendly_lb(score.board) ) );
+	}
+	tgrid.appendChild(pname)
+
+	var pscore = document.createElement("div")
+	pscore.classList.add("span-2")
+	pscore.appendChild( document.createTextNode( score.score.toLocaleString() ) );
+
+	var max_combo = document.createElement("span")
+	max_combo.classList.add("small-text")
+	max_combo.classList.add("left-spacer")
+	max_combo.appendChild( document.createTextNode( score.max_combo + "x COMBO +" + score.holds_hit + " WYRMS" ) );
+	pscore.appendChild( max_combo )
+
+	tgrid.appendChild(pscore)
+
+	var basic_score = 0
+	for( mult in score.InputMults ){
+		var multiplied_score = score.InputMults[mult]
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.oks ) * 111
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.goods ) * 222
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.greats ) * 333
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.perfects ) * 555
+	}
+	basic_score += Number( score.holds_hit ) * 333
+	
+	var bonus_points = (score.score - basic_score) / 2.0
+
+	if( score.dnf ){
+		bonus_points = 0
+	}
+
+	var acc = 0
+	var possible_acc = 0
+
+	possible_acc += score.total_perfects * 1.0
+	possible_acc += score.total_greats * 1.0
+	possible_acc += score.total_goods * 1.0
+	possible_acc += score.total_oks * 1.0
+	possible_acc += score.total_misses * 1.0
+	
+	acc += bonus_points * 1.0
+	acc += (score.total_perfects-bonus_points) * 0.99
+	acc += score.total_greats * .8
+	acc += score.total_goods * .5
+	acc += score.total_oks * .3
+	acc += score.total_misses * 0
+
+	var acc_percentage = 0
+	if( possible_acc > 0 ){
+		acc_percentage = acc / possible_acc
+	}
+
+	var average = score.average * 1000
+
+	var acc_data = (acc_percentage * 100).toFixed(4)+"%"
+	var avg_sign = ""
+	var acc_split = acc_data.split(".")
+	if( average > 0 ){
+		avg_sign = "+"
+	} else {
+		avg_sign = "-"
+	}
+	acc_data = Math.abs(average).toFixed(1)+"ms"
+	var avg_split = acc_data.split(".")
+
+	var acc_table = document.createElement("div")
+	acc_table.classList.add("tooltip")
+
+	var acc_big = document.createElement("span")
+	acc_big.appendChild( document.createTextNode( acc_split[0] ) )
+	acc_table.appendChild( acc_big );
+
+	var acc_small = document.createElement("span")
+	acc_small.classList.add("small-text")
+	acc_small.appendChild( document.createTextNode( "."+acc_split[1] ) )
+	acc_table.appendChild( acc_small );
+
+	var avg_big = document.createElement("span")
+	avg_big.appendChild( document.createTextNode( " " + avg_sign + avg_split[0] ) )
+	acc_table.appendChild( avg_big );
+
+	var avg_small = document.createElement("span")
+	avg_small.classList.add("small-text")
+	avg_small.appendChild( document.createTextNode( "."+avg_split[1] ) )
+	acc_table.appendChild( avg_small );
+
+	var acc_tooltip = document.createElement("span")
+	acc_tooltip.classList.add("tooltiptext")
+
+	var tt_text = ""
+	tt_text = score.total_perfects + " | "+score.total_greats+" | "+score.total_goods+" | "+score.total_oks+" | "+score.total_misses
+
+	acc_tooltip.appendChild( document.createTextNode( tt_text ) )
+	acc_table.appendChild( acc_tooltip )
+
+	tgrid.appendChild(acc_table)
+
+	leaderboard_table.appendChild(trow)
+
+	var flag = ""
+	if ( score.fc ){
+		flag = "FC"
+		if( score.total_oks == 0 && score.total_goods == 0 ){
+			if( score.total_greats < 10 ){
+				flag = "SDG"
+			}
+		}
+	} else {
+		if( score.total_misses < 10 ){
+			flag = "SDCB"
+		}
+	}
+	if( score.pfc ){
+		flag = "PFC"
+	}
+
+	if( score.dnf ){
+		flag = "DNF"
+	} 
+
+	var base_score = score.base_score
+	var total_score = score.score
+	var rating = "D "
+	if( total_score > base_score * 2 ){
+		rating = "C "
+	}
+	if( total_score > base_score * 3 ){
+		rating = "B "
+	}
+	if( total_score > base_score * 4 ){
+		rating = "A "
+	}
+	if( total_score > base_score * 5.5 ){
+		rating = "S "
+	}
+	if( total_score > base_score * 6.5 ){
+		rating = "S+"
+	}
+
+	if( score.cheated ){
+		flag = "CHEATED"
+	}
+	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){
+		flag = "CHEATED"
+	}
+
+	var flag_table = document.createElement("div")
+	flag_table.appendChild( document.createTextNode( rating + " " + flag ) );
+	tgrid.appendChild(flag_table)
+
+	var vt = ""
+	for( t in score.vibe_times ){
+		var time = score.vibe_times[t].toFixed(1)
+		vt += time
+		if( t != score.vibe_times.length-1 ){
+			vt += " | "
+		}
+	}
+
+	var vibe_table = document.createElement("div")
+	vibe_table.classList.add("span-2")
+	vibe_table.classList.add("small-text")
+	vibe_table.appendChild( document.createTextNode( vt ) );
+	tgrid.appendChild(vibe_table)
+}
+
 function generate_leaderboards( json_objects ) {
 	var leaderboard_table = document.getElementById("leaderboard")
 	var rows = 0
@@ -727,176 +952,10 @@ function generate_leaderboards( json_objects ) {
 
 		for( s in lb.scores ){
 			var score = lb.scores[s]
+			score.rank = s
 			//console.log(score)
-
-			var trow = document.createElement("div")
-			trow.classList.add("table-row")
-			if( rows % 2 == 0 ){
-				trow.classList.add("table-dark")
-			} else {
-				trow.classList.add("table-light")
-			}
+			generate_row( leaderboard_table, score, rows )
 			rows += 1
-
-			var tgrid = document.createElement("div")
-			tgrid.classList.add("table-grid")
-
-			trow.appendChild(tgrid)
-
-			var rank = document.createElement("div")
-			rank.appendChild( document.createTextNode( Number(s)+1 ) );
-			tgrid.appendChild(rank)
-
-			var pname = document.createElement("div")
-			pname.classList.add("span-2")
-			pname.appendChild( document.createTextNode( score.player_name ) );
-			tgrid.appendChild(pname)
-
-			var pscore = document.createElement("div")
-			pscore.classList.add("span-2")
-			pscore.appendChild( document.createTextNode( score.score.toLocaleString() ) );
-
-			var max_combo = document.createElement("span")
-			max_combo.classList.add("small-text")
-			max_combo.classList.add("left-spacer")
-			max_combo.appendChild( document.createTextNode( score.max_combo + "x COMBO +" + score.holds_hit + " WYRMS" ) );
-			pscore.appendChild( max_combo )
-
-			tgrid.appendChild(pscore)
-
-			var acc = 0
-			var possible_acc = 0
-
-			possible_acc += score.total_perfects * 1.0
-			possible_acc += score.total_greats * 1.0
-			possible_acc += score.total_goods * 1.0
-			possible_acc += score.total_oks * 1.0
-			possible_acc += score.total_misses * 1.0
-			
-			acc += score.total_perfects * 1.0
-			acc += score.total_greats * .8
-			acc += score.total_goods * .5
-			acc += score.total_oks * .3
-			acc += score.total_misses * 0
-
-			var acc_percentage = 0
-			if( possible_acc > 0 ){
-				acc_percentage = acc / possible_acc
-			}
-
-			var average = score.average * 1000
-
-			var acc_data = (acc_percentage * 100).toFixed(4)+"%"
-			var avg_sign = ""
-			var acc_split = acc_data.split(".")
-			if( average > 0 ){
-				avg_sign = "+"
-			} else {
-				avg_sign = "-"
-			}
-			acc_data = Math.abs(average).toFixed(1)+"ms"
-			var avg_split = acc_data.split(".")
-
-			var acc_table = document.createElement("div")
-			acc_table.classList.add("tooltip")
-
-			var acc_big = document.createElement("span")
-			acc_big.appendChild( document.createTextNode( acc_split[0] ) )
-			acc_table.appendChild( acc_big );
-
-			var acc_small = document.createElement("span")
-			acc_small.classList.add("small-text")
-			acc_small.appendChild( document.createTextNode( "."+acc_split[1] ) )
-			acc_table.appendChild( acc_small );
-
-			var avg_big = document.createElement("span")
-			avg_big.appendChild( document.createTextNode( " " + avg_sign + avg_split[0] ) )
-			acc_table.appendChild( avg_big );
-
-			var avg_small = document.createElement("span")
-			avg_small.classList.add("small-text")
-			avg_small.appendChild( document.createTextNode( "."+avg_split[1] ) )
-			acc_table.appendChild( avg_small );
-
-			var acc_tooltip = document.createElement("span")
-			acc_tooltip.classList.add("tooltiptext")
-
-			var tt_text = ""
-			tt_text = score.total_perfects + " | "+score.total_greats+" | "+score.total_goods+" | "+score.total_oks+" | "+score.total_misses
-
-			acc_tooltip.appendChild( document.createTextNode( tt_text ) )
-			acc_table.appendChild( acc_tooltip )
-
-			tgrid.appendChild(acc_table)
-
-			leaderboard_table.appendChild(trow)
-
-			var flag = ""
-			if ( score.fc ){
-				flag = "FC"
-				if( score.total_oks == 0 && score.total_goods == 0 ){
-					if( score.total_greats < 10 ){
-						flag = "SDG"
-					}
-				}
-			} else {
-				if( score.total_misses < 10 ){
-					flag = "SDCB"
-				}
-			}
-			if( score.pfc ){
-				flag = "PFC"
-			}
-
-			if( score.dnf ){
-				flag = "DNF"
-			} 
-
-			var base_score = score.base_score
-			var total_score = score.score
-			var rating = "D "
-			if( total_score > base_score * 2 ){
-				rating = "C "
-			}
-			if( total_score > base_score * 3 ){
-				rating = "B "
-			}
-			if( total_score > base_score * 4 ){
-				rating = "A "
-			}
-			if( total_score > base_score * 5.5 ){
-				rating = "S "
-			}
-			if( total_score > base_score * 6.5 ){
-				rating = "S+"
-			}
-
-			if( score.cheated ){
-				flag = "CHEATED"
-			}
-			if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){
-				flag = "CHEATED"
-			}
-
-			var flag_table = document.createElement("div")
-			flag_table.appendChild( document.createTextNode( rating + " " + flag ) );
-			tgrid.appendChild(flag_table)
-
-			var vt = ""
-			for( t in score.vibe_times ){
-				var time = score.vibe_times[t].toFixed(1)
-				vt += time
-				if( t != score.vibe_times.length-1 ){
-					vt += " | "
-				}
-			}
-
-			var vibe_table = document.createElement("div")
-			vibe_table.classList.add("span-2")
-			vibe_table.classList.add("small-text")
-			vibe_table.appendChild( document.createTextNode( vt ) );
-			tgrid.appendChild(vibe_table)
-
 		}
 		//console.log(lb)
 	} else {
@@ -1038,4 +1097,46 @@ function listCharts(){
 		e.appendChild(opt);
 	}
 
+}
+
+function get_player_scores( json_objects, pid ){
+	var scores = []
+	var leaderboard_table = document.getElementById("leaderboard")
+	rows = 0
+	for( j in json_objects ){
+		var json = json_objects[j]
+
+		for( s in json.scores ){
+			var score = json.scores[s]
+			if( score.player_id == pid ){
+				score.board = json.name
+				score.rank = s
+				scores.push( score )
+			}
+		}
+	}
+
+	scores.sort( (a,b) => { return a.rank > b.rank } )
+
+	leaderboard_table.innerHTML = ""
+	for( score in scores ){
+		generate_row(leaderboard_table, scores[score], rows, replace_name_with_board=true)
+		rows += 1
+	}
+	
+}
+
+function showPlayerDetails( evt ){
+	var pid = evt.currentTarget.player_id
+
+	var boards = []
+	for( b in valid_boards ){	
+		boards.push('leaderboards/'+valid_boards[b]+'.json')		
+	}
+
+	var promises = boards.map(board => fetch(board))
+	
+	Promise.all(promises)
+	.then( responses => Promise.all( responses.map(r => r.json() ) ) )
+	.then( jsonObjects => get_player_scores(jsonObjects, pid) )
 }
