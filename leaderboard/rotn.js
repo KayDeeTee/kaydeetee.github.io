@@ -684,7 +684,7 @@ var all_charts = {
 	"RRElusional":{ "name": "Elusional"},
 	"RRVisualizeYourself":{ "name": "Visualize Yourself"},
 	"RRSpookhousePop":{ "name": "Spookhouse Pop"},
-	"RROmandOn":{ "name": "Om and Om"},
+	"RROmandOn":{ "name": "Om and On"},
 	"RRMorningDove":{ "name": "Morning Dove"},
 	"RRHephsMess":{ "name": "Heph's Mess"},
 	"RRAmalgamaniac":{ "name": "Amalgamaniac"},
