@@ -2,6 +2,7 @@ var selected_chart = "RR-All"
 var selected_diff = "DiffImpossible"
 var selected_remix = "NonRemix"
 var selected_coda = "NonCoda"
+var hide_cheaters = true
 
 var valid_boards = [
 "P_C_H_RRTwombtorial",
@@ -750,7 +751,12 @@ function friendly_lb( lb_name ){
 }
 
 function generate_row( leaderboard_table, score, rows, replace_name_with_board=false ){
+	var is_cheater = false
+	if( score.cheated ){ is_cheater = true }
+	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ is_cheater = true }
+
 	var trow = document.createElement("div")
+if( is_cheater ){ trow.classList.add("table-cheater") }
 	trow.classList.add("table-row")
 	if( rows % 2 == 0 ){
 		trow.classList.add("table-dark")
@@ -758,13 +764,19 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 		trow.classList.add("table-light")
 	}
 
+
 	var tgrid = document.createElement("div")
 	tgrid.classList.add("table-grid")
 
 	trow.appendChild(tgrid)
 
 	var rank = document.createElement("div")
-	rank.appendChild( document.createTextNode( Number(score.rank)+1 ) );
+	if( is_cheater ){
+		rank.appendChild( document.createTextNode( "-" ) );
+	} else {
+		rank.appendChild( document.createTextNode( Number(score.rank)+1 ) );
+	}
+	
 	tgrid.appendChild(rank)
 
 	var pname = document.createElement("div")
@@ -803,7 +815,7 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 	
 	var bonus_points = (score.score - basic_score) / 2.0
 
-	if( score.dnf ){
+	if( score.dnf || is_cheater ){
 		bonus_points = 0
 	}
 
@@ -939,10 +951,7 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 		rating = "S+"
 	}
 
-	if( score.cheated ){
-		flag = "CHEATED"
-	}
-	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){
+	if( is_cheater ){
 		flag = "CHEATED"
 	}
 
@@ -964,6 +973,8 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 	vibe_table.classList.add("small-text")
 	vibe_table.appendChild( document.createTextNode( vt ) );
 	tgrid.appendChild(vibe_table)
+
+	return is_cheater
 }
 
 function generate_leaderboards( json_objects ) {
@@ -972,13 +983,19 @@ function generate_leaderboards( json_objects ) {
 	if( json_objects.length == 1 ){
 		//just list scores
 		var lb = json_objects[0]
+		var rank = 0
 		//console.log(lb)
 
 		for( s in lb.scores ){
 			var score = lb.scores[s]
-			score.rank = s
+			score.rank = rank
+
 			//console.log(score)
-			generate_row( leaderboard_table, score, rows )
+			if( !generate_row( leaderboard_table, score, rows ) ){
+				rank += 1
+			} else {
+				if( hide_cheaters ) rows -= 1;
+			}
 			rows += 1
 		}
 		//console.log(lb)
@@ -1106,6 +1123,16 @@ function updateCoda(){
 	repopulate_leaderboard();
 }
 
+function toggleCheaters(){
+	var c = document.getElementById("cheat_toggle") 
+	var e = document.getElementById("leaderboard")
+
+	if( c.checked ){
+		e.classList.add("show-cheaters")
+	} else {
+		e.classList.remove("show-cheaters")
+	}
+}
 
 function listCharts(){
 	var footer = document.getElementById("footer")
