@@ -678,7 +678,7 @@ var valid_boards = [
 "P_C_H_CD_RRCountFunkula",
 ]
 
-var last_update = "2025-03-18 22:16:17"
+var last_update = "2025-03-20 00:13:27"
 
 var all_charts = {
 	"RRDiscoDisaster":{ "name": "Disco Disaster"},
