@@ -53,8 +53,8 @@
       <div class="dark main">
         <div class="content-margin">
 
-          <div class="table-row table-head">
-            <div class="table-grid"> 
+          <div id="lb_legend" class="table-row table-head show-regular">
+            <div class="table-grid regular-leaderboard"> 
               <div> Rank </div>
               <div class="span-2"> Name <span class="info-tooltip"> ⓘ
                 <div class="tooltiptext" style="height: 160px;width: 238px;">Click on a name to show that players scores.&#10;&#13;E: Easy&#10;&#13;M: Medium&#10;&#13;H: Hard&#10;&#13;X: Impossible&#10;&#13;🌀: Remix&#10;&#13;🌱: Remix Seeded&#10;&#13;🎯: Coda</div>
@@ -67,6 +67,18 @@
                 <div class="tooltiptext">FC: Full Combo&#10;&#13;PFC: Perfect Full Combo&#10;&#13;SDG: Single Digit Greats&#10;&#13;SDCB: Single Digit Combo Breaks&#10;&#13;DNF: Did Not Finish&#10;&#13;CHEATED: Probably cheated</div>
               </span></div>
               <div class="span-2"> Vibe (Beat) </div> </div>
+                <div class="table-grid ranked-leaderboard"> 
+              <div id="rank-rank-legend"> Rank </div>
+              <div class="span-2"> Name  </div>
+              <div class="span-2" id="rank-score-legend"> Score </div>
+              <div> Avg. Acc <span class="info-tooltip"> ⓘ
+                <div class="tooltiptext" style="height: 160px;width: 238px;">PF: 99%&#10;&#13;GR: 80%&#10;&#13;GD: 50%&#10;&#13;OK: 30%&#10;&#13;MS: 00%&#10;&#13;Every 2 bonus points turns a 99% PF into a 100% PF&#10;&#13;PFC with only e/l perfects = 99%&#10;&#13;PFC with only crit perfects = 100% </div>
+              </span></div>
+              <div id="rank-first-legend"> Rank 1s</div>
+              <div id="rank-avg-legend" class="span-2"> Avg. Rank </div> 
+          </div>
+          </div>
+
           </div>
           <div class="table" id="leaderboard">
             

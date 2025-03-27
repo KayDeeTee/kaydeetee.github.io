@@ -744,6 +744,71 @@ var all_charts = {
 	"DLCApricot03":{ "name": "Bootus Bleez"},
 }
 
+function sort_leaderboard_avg_rank(){
+	var lb = document.getElementById('leaderboard')
+	var e = lb.children
+
+	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("average_rank")[0].textContent) > Number(b.getElementsByClassName("average_rank")[0].textContent) } ).forEach( element => { lb.appendChild(element); });
+}
+
+function sort_leaderboard_firsts(){
+	var lb = document.getElementById('leaderboard')
+	var e = lb.children
+
+	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("first_places")[0].textContent) < Number(b.getElementsByClassName("first_places")[0].textContent) } ).forEach( element => { lb.appendChild(element); });
+}
+
+function sort_leaderboard_score(){
+	var lb = document.getElementById('leaderboard')
+	var e = lb.children
+
+	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("rank_score")[0].score) < Number(b.getElementsByClassName("rank_score")[0].score) } ).forEach( element => { lb.appendChild(element); });
+}
+
+
+function get_acc_for_score( score, is_cheater ){
+
+	var basic_score = 0
+	for( mult in score.InputMults ){
+		var multiplied_score = score.InputMults[mult]
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.oks ) * 111
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.goods ) * 222
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.greats ) * 333
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.perfects ) * 555
+	}
+	basic_score += Number( score.holds_hit ) * 333
+	
+	var bonus_points = (score.score - basic_score) / 2.0
+
+	if( score.dnf || is_cheater ){
+		bonus_points = 0
+	}
+
+	var acc = 0
+	var possible_acc = 0
+
+	possible_acc += score.total_perfects * 1.0
+	possible_acc += score.total_greats * 1.0
+	possible_acc += score.total_goods * 1.0
+	possible_acc += score.total_oks * 1.0
+	possible_acc += score.total_misses * 1.0
+	
+	acc += bonus_points * 1.0
+	acc += (score.total_perfects-bonus_points) * 0.99
+	acc += score.total_greats * .8
+	acc += score.total_goods * .5
+	acc += score.total_oks * .3
+	acc += score.total_misses * 0
+
+	var acc_percentage = 0
+	if( possible_acc > 0 ){
+		acc_percentage = acc / possible_acc
+	}
+
+	return Number(acc_percentage)
+
+}
+
 function friendly_lb( lb_name ){
 	var lb_name = lb_name.slice(4)
 	var data = lb_name.split("_")
@@ -776,13 +841,76 @@ function friendly_lb( lb_name ){
 
 }
 
+function generate_row_manual(leaderboard_table, rank, name, score, accuracy, details, vibe, rows, is_cheater, player_id ){
+	var trow = document.createElement("div")
+	
+	if( is_cheater ){ 
+		trow.classList.add("table-cheater") 
+	} else {
+		trow.classList.add("table-row")
+	}
+
+
+	var tgrid = document.createElement("div")
+	tgrid.classList.add("table-grid")
+
+	trow.appendChild(tgrid)
+
+	var rank_div = document.createElement("div")
+	if( is_cheater ){
+		rank_div.appendChild( document.createTextNode( "-" ) );
+	} else {
+		rank_div.appendChild( document.createTextNode( rank ) );
+	}
+	
+	tgrid.appendChild(rank_div)
+
+	var pname = document.createElement("div")
+	pname.classList.add("span-2")
+	pname.classList.add("clickable")
+	pname.addEventListener('click', showPlayerDetails, false )
+	pname.player_id = player_id
+	pname.appendChild( document.createTextNode( name ) );
+	tgrid.appendChild(pname)
+
+	var pscore = document.createElement("div")
+	pscore.classList.add("span-2")
+	pscore.classList.add("rank_score")
+	pscore.score = score
+	pscore.appendChild( document.createTextNode( score.toLocaleString() ) );
+
+	tgrid.appendChild(pscore)
+
+	var acc_percentage = accuracy
+
+	var acc_data = (acc_percentage * 100).toFixed(4)+"%"
+	var acc_table = document.createElement("div")
+	acc_table.appendChild( document.createTextNode(acc_data) );
+
+	tgrid.appendChild(acc_table)
+
+	
+
+	var flag_table = document.createElement("div")
+	flag_table.classList.add("first_places")
+	flag_table.appendChild( document.createTextNode( details ) );
+	tgrid.appendChild(flag_table)
+
+	var vibe_table = document.createElement("div")
+	vibe_table.classList.add("average_rank")
+	vibe_table.appendChild( document.createTextNode( vibe ) );
+	tgrid.appendChild(vibe_table)
+
+	leaderboard_table.appendChild(trow)
+}
+
 function generate_row( leaderboard_table, score, rows, replace_name_with_board=false ){
 	var is_cheater = false
 	if( score.cheated ){ is_cheater = true }
 	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ is_cheater = true }
 
 	var trow = document.createElement("div")
-if( is_cheater ){ trow.classList.add("table-cheater") }
+	if( is_cheater ){ trow.classList.add("table-cheater") }
 	trow.classList.add("table-row")
 	if( rows % 2 == 0 ){
 		trow.classList.add("table-dark")
@@ -829,42 +957,7 @@ if( is_cheater ){ trow.classList.add("table-cheater") }
 
 	tgrid.appendChild(pscore)
 
-	var basic_score = 0
-	for( mult in score.InputMults ){
-		var multiplied_score = score.InputMults[mult]
-		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.oks ) * 111
-		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.goods ) * 222
-		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.greats ) * 333
-		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.perfects ) * 555
-	}
-	basic_score += Number( score.holds_hit ) * 333
-	
-	var bonus_points = (score.score - basic_score) / 2.0
-
-	if( score.dnf || is_cheater ){
-		bonus_points = 0
-	}
-
-	var acc = 0
-	var possible_acc = 0
-
-	possible_acc += score.total_perfects * 1.0
-	possible_acc += score.total_greats * 1.0
-	possible_acc += score.total_goods * 1.0
-	possible_acc += score.total_oks * 1.0
-	possible_acc += score.total_misses * 1.0
-	
-	acc += bonus_points * 1.0
-	acc += (score.total_perfects-bonus_points) * 0.99
-	acc += score.total_greats * .8
-	acc += score.total_goods * .5
-	acc += score.total_oks * .3
-	acc += score.total_misses * 0
-
-	var acc_percentage = 0
-	if( possible_acc > 0 ){
-		acc_percentage = acc / possible_acc
-	}
+	var acc_percentage = get_acc_for_score( score, is_cheater )
 
 	var average = score.average * 1000
 
@@ -1005,8 +1098,12 @@ if( is_cheater ){ trow.classList.add("table-cheater") }
 
 function generate_leaderboards( json_objects ) {
 	var leaderboard_table = document.getElementById("leaderboard")
+	var legend = document.getElementById('lb_legend')
+	legend.classList.remove("show-regular")
+	legend.classList.remove("show-ranked")
 	var rows = 0
 	if( json_objects.length == 1 ){
+		legend.classList.add("show-regular")
 		//just list scores
 		var lb = json_objects[0]
 		var rank = 0
@@ -1027,6 +1124,61 @@ function generate_leaderboards( json_objects ) {
 		//console.log(lb)
 	} else {
 		//calc a rating
+		legend.classList.add("show-ranked")
+		var players = {}
+
+		for( idx in json_objects ){
+			var lb = json_objects[idx]
+			var scores = lb.scores
+
+			var first_score = scores[0]
+			var last_score = scores[ scores.length-1 ]
+			var diff = first_score.score-last_score.score
+
+			for( s in scores ){
+				var score = scores[s]
+				var rel_score = (score.score-last_score.score)/diff
+
+				if( players[score.player_id] == undefined ){
+					players[score.player_id] = {}
+					players[score.player_id]["player_id"] = score.player_id
+					players[score.player_id]["player_name"] = score.player_name
+					players[score.player_id]["acc"] = 0
+					players[score.player_id]["rank"] = 0
+					players[score.player_id]["firsts"] = 0
+					players[score.player_id]["scores"] = 0
+					players[score.player_id]["score"] = 0
+					players[score.player_id]["is_cheater"] = false
+				}
+				players[score.player_id]["score"] += Math.floor( rel_score * rel_score * 10000 )
+				players[score.player_id]["acc"] += get_acc_for_score( score, false )
+				players[score.player_id]["scores"] += 1
+				players[score.player_id]["rank"] += Number(s)+1
+				if( s == 0 ){ players[score.player_id]["firsts"] += 1 }
+
+				if( score.cheated ){ players[score.player_id]["is_cheater"] = true }
+				if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ players[score.player_id]["is_cheater"] = true }
+
+			}
+		}
+
+		p_array = Object.values( players )
+		p_array.sort( (a,b) => { return Number(a.score) < Number(b.score) }) 
+
+		var cheaters = 0
+
+		for( s in p_array ){
+			var score = p_array[s]
+
+			var acc = players[score.player_id]["acc"] / players[score.player_id]["scores"]
+			var avg_rank = Number(score["rank"])  / Number(players[score.player_id]["scores"])
+			avg_rank = avg_rank.toFixed(1)
+			generate_row_manual( leaderboard_table, Number(s)+1-cheaters, score["player_name"], score["score"], acc, score["firsts"], avg_rank, (Number(s)+cheaters)%2, score["is_cheater"], score["player_id"] )
+
+			if( score["is_cheater"] ) cheaters += 1
+		}
+
+
 	}
 }
 
@@ -1163,6 +1315,23 @@ function toggleCheaters(){
 function listCharts(){
 	var footer = document.getElementById("footer")
 	footer.appendChild( document.createTextNode( "Last API Fetch : " + last_update + " UTC" ) )
+
+	var rank_average = document.getElementById("rank-avg-legend")
+	rank_average.classList.add("clickable")
+	rank_average.addEventListener('click', sort_leaderboard_avg_rank, false )
+
+
+	var rank_firsts = document.getElementById("rank-first-legend")
+	rank_firsts.classList.add("clickable")
+	rank_firsts.addEventListener('click', sort_leaderboard_firsts, false )
+
+	var rank_scores = document.getElementById("rank-score-legend")
+	rank_scores.classList.add("clickable")
+	rank_scores.addEventListener('click', sort_leaderboard_score, false )
+
+	var rank_rank = document.getElementById("rank-rank-legend")
+	rank_rank.classList.add("clickable")
+	rank_rank.addEventListener('click', sort_leaderboard_score, false )
 
 	var e = document.getElementById("chart")
 

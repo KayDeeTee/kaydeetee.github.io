@@ -15,6 +15,14 @@ select{
   padding: 8px;
 }
 
+.show-regular .ranked-leaderboard {
+  display: none;
+}
+
+.show-ranked .regular-leaderboard {
+  display: none;
+}
+
 .oxanium-bold {
   font-family: "Oxanium", sans-serif;
   font-optical-sizing: auto;
@@ -46,6 +54,7 @@ select{
 
 .content-margin {
   margin: 8px;
+  margin-bottom: 0px;
 }
 
 .dark {
@@ -57,16 +66,17 @@ select{
   border-radius: 8px 8px 0px 0px;
 }
 
-.table-dark {
-  background-color: #313c45;
+#leaderboard .table-row:nth-child(even of .table-row){
+  background-color: #3a4452;
 }
 
-.table-light {
-  background-color: #3a4452;
+#leaderboard .table-row:nth-child(odd of .table-row){
+  background-color: #313c45;
 }
 
 .table-cheater {
   background-color: #6a3c3c;
+  padding: 16px;
   display: none;
 }
 
