@@ -748,21 +748,21 @@ function sort_leaderboard_avg_rank(){
 	var lb = document.getElementById('leaderboard')
 	var e = lb.children
 
-	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("average_rank")[0].textContent) > Number(b.getElementsByClassName("average_rank")[0].textContent) } ).forEach( element => { lb.appendChild(element); });
+	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("average_rank")[0].textContent) - Number(b.getElementsByClassName("average_rank")[0].textContent) } ).forEach( element => { lb.appendChild(element); });
 }
 
 function sort_leaderboard_firsts(){
 	var lb = document.getElementById('leaderboard')
 	var e = lb.children
 
-	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("first_places")[0].textContent) < Number(b.getElementsByClassName("first_places")[0].textContent) } ).forEach( element => { lb.appendChild(element); });
+	Array.from( e ).sort( (a,b) => { return Number(b.getElementsByClassName("first_places")[0].textContent) - Number(a.getElementsByClassName("first_places")[0].textContent) } ).forEach( element => { lb.appendChild(element); });
 }
 
 function sort_leaderboard_score(){
 	var lb = document.getElementById('leaderboard')
 	var e = lb.children
 
-	Array.from( e ).sort( (a,b) => { return Number(a.getElementsByClassName("rank_score")[0].score) < Number(b.getElementsByClassName("rank_score")[0].score) } ).forEach( element => { lb.appendChild(element); });
+	Array.from( e ).sort( (a,b) => { return Number(b.getElementsByClassName("rank_score")[0].score) - Number(a.getElementsByClassName("rank_score")[0].score) } ).forEach( element => { lb.appendChild(element); });
 }
 
 
@@ -1163,7 +1163,7 @@ function generate_leaderboards( json_objects ) {
 		}
 
 		p_array = Object.values( players )
-		p_array.sort( (a,b) => { return Number(a.score) < Number(b.score) }) 
+		p_array.sort( (a,b) => { return Number(b.score) - Number(a.score) }) 
 
 		var cheaters = 0
 
