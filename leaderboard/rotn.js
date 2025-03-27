@@ -1392,6 +1392,11 @@ function get_player_scores( json_objects, pid ){
 }
 
 function showPlayerDetails( evt ){
+	var legend = document.getElementById('lb_legend')
+	legend.classList.remove("show-regular")
+	legend.classList.remove("show-ranked")
+	legend.classList.add("show-regular")
+
 	var pid = evt.currentTarget.player_id
 
 	var boards = []
