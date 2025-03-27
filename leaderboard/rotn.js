@@ -774,7 +774,7 @@ var all_charts = {
 	"DLCApricot01":{ "name": "Slugger's Refrain"},
 	"DLCApricot02":{ "name": "Got Danged"},
 	"DLCApricot03":{ "name": "Bootus Bleez"},
-	"DLCBanana01":{ "name": "Resurrections (dannyBstyle Remix"},
+	"DLCBanana01":{ "name": "Resurrections (dannyBstyle Remix)"},
 	"DLCBanana02":{ "name": "Scattered And Lost"},
 	"DLCBanana03":{ "name": "Reach for the Summit"},
 	"DLCBanana04":{ "name": "Resurrections"},
