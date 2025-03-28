@@ -777,8 +777,8 @@ var all_charts = {
 	"DLCBanana01":{ "name": "Resurrections (dannyBstyle Remix)"},
 	"DLCBanana02":{ "name": "Scattered And Lost"},
 	"DLCBanana03":{ "name": "Reach for the Summit"},
-	"DLCBanana04":{ "name": "Resurrections"},
-	"DLCBanana05":{ "name": "Confronting Myself"},
+	"DLCBanana04":{ "name": "Confronting Myself"},
+	"DLCBanana05":{ "name": "Resurrections"},
 }
 
 function sort_leaderboard_avg_rank(){
