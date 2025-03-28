@@ -736,7 +736,7 @@ var valid_boards = [
 "P_C_H_RS_RRRavevenge",
 ]
 
-var last_update = "2025-03-28 00:05:41"
+var last_update = "2025-03-28 23:14:11"
 
 var all_charts = {
 	"RRDiscoDisaster":{ "name": "Disco Disaster"},
