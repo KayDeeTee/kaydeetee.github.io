@@ -774,11 +774,16 @@ var all_charts = {
 	"DLCApricot01":{ "name": "Slugger's Refrain"},
 	"DLCApricot02":{ "name": "Got Danged"},
 	"DLCApricot03":{ "name": "Bootus Bleez"},
-	"DLCBanana01":{ "name": "Resurrections (dannyBstyle Remix)"},
-	"DLCBanana02":{ "name": "Scattered And Lost"},
-	"DLCBanana03":{ "name": "Reach for the Summit"},
-	"DLCBanana04":{ "name": "Confronting Myself"},
-	"DLCBanana05":{ "name": "Resurrections"},
+	"DLCBanana01":{ "name": "Mantis Lords (dannyBstyle remix)"},
+	"DLCBanana02":{ "name": "Radiance"},
+	"DLCBanana03":{ "name": "Nightmare King "},
+	"DLCBanana04":{ "name": "Furious Gods"},
+	"DLCBanana05":{ "name": "Lace"},
+	//"DLCBanana01":{ "name": "Resurrections (dannyBstyle Remix)"},
+	//"DLCBanana02":{ "name": "Scattered And Lost"},
+	//"DLCBanana03":{ "name": "Reach for the Summit"},
+	//"DLCBanana04":{ "name": "Confronting Myself"},
+	//"DLCBanana05":{ "name": "Resurrections"},
 }
 
 function sort_leaderboard_avg_rank(){
