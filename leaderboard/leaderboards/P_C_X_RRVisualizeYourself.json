@@ -147,30 +147,30 @@
                 },
                 {
                     "goods": 0,
-                    "greats": 1,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
                 },
                 {
-                    "goods": 0,
+                    "goods": 1,
                     "greats": 9,
                     "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 596
+                    "perfects": 595
                 },
                 {
                     "goods": 0,
-                    "greats": 5,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 141
+                    "perfects": 145
                 }
             ],
-            "average": 0.0001,
+            "average": 0.0024,
             "base_score": 260073,
             "cheated": false,
             "create_epoch": 1740104110978,
@@ -200,11 +200,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 3
@@ -213,11 +209,15 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 596
+                            "NumberOfInputs": 595
                         },
                         {
                             "InputRating": "Great",
                             "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Good",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -226,11 +226,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 141
+                            "NumberOfInputs": 145
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 8
@@ -240,21 +240,21 @@
             "pfc": false,
             "player_id": "1b6c184e-a1a8-4313-b643-dca2b2f82ce1",
             "player_name": "RecalledCantaloupe",
-            "score": 2083840,
-            "total_goods": 0,
-            "total_greats": 15,
+            "score": 2090232,
+            "total_goods": 1,
+            "total_greats": 10,
             "total_misses": 0,
             "total_oks": 0,
-            "total_perfects": 766,
-            "update_epoch": 1745335573086,
+            "total_perfects": 770,
+            "update_epoch": 1745364398489,
             "vibe_chains_hit": 5,
             "vibe_chains_missed": 0,
-            "vibe_duration": 25.335,
+            "vibe_duration": 25.3311,
             "vibe_times": [
-                91.8879,
-                136.2283,
-                228.8174,
-                351.5197
+                91.8286,
+                136.277,
+                228.7105,
+                351.7831
             ],
             "vibes": 4
         },
