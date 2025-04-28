@@ -1288,6 +1288,9 @@ function generate_leaderboards( json_objects ) {
 			var first_score = scores[0]
 			var last_score = scores[ scores.length-1 ]
 			var diff = first_score.score-last_score.score
+			if( diff == 0 ){
+				diff = 1
+			}
 
 			for( s in scores ){
 				var score = scores[s]
