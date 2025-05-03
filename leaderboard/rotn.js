@@ -919,6 +919,18 @@ function sort_leaderboard_score(){
 	Array.from( e ).sort( (a,b) => { return Number(b.getElementsByClassName("rank_score")[0].score) - Number(a.getElementsByClassName("rank_score")[0].score) } ).forEach( element => { lb.appendChild(element); });
 }
 
+function get_basic_score( score, is_cheater ){
+	var basic_score = 0
+	for( mult in score.InputMults ){
+		var multiplied_score = score.InputMults[mult]
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.oks ) * 111
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.goods ) * 222
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.greats ) * 333
+		basic_score += Number( multiplied_score.mult ) * Number( multiplied_score.perfects ) * 555
+	}
+	basic_score += Number( score.holds_hit ) * 333
+	return Number(basic_score)
+}
 
 function get_acc_for_score( score, is_cheater ){
 
@@ -1062,6 +1074,17 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 	var is_cheater = false
 	if( score.cheated ){ is_cheater = true }
 	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ is_cheater = true }
+
+	if( score.total_misses + score.total_oks + score.total_goods + score.total_greats == 0 ){
+		console.log( "PFC" )
+		var bonus_points = score.score - get_basic_score( score, is_cheater )
+		console.log( bonus_points )
+		if( bonus_points == (score.total_perfects * 2) ){
+			console.log( "cheater" )
+			is_cheater = true
+			score.cheated = true
+		}
+	}
 
 	var trow = document.createElement("div")
 	if( is_cheater ){ trow.classList.add("table-cheater") }
