@@ -918,6 +918,10 @@ var all_charts = {
 	"DLCCherry04":{ "name": "DLCCherry04"},
 }
 
+var custom_name_styles = {
+	"8bc8f869-23ba-4d3b-a6d1-6646d51f5d30": "main-dev"
+}
+
 function sort_leaderboard_avg_rank(){
 	var lb = document.getElementById('leaderboard')
 	var e = lb.children
@@ -1148,7 +1152,25 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 		pname.classList.add("clickable")
 		pname.addEventListener('click', showPlayerDetails, false )
 		pname.player_id = score.player_id
-		pname.appendChild( document.createTextNode( score.player_name ) );
+		if( score.player_name.startsWith( "<color=#187ea8>[DEV] </color>" ) ){
+			player_name = score.player_name.replace("<color=#187ea8>[DEV] </color>", "")
+
+			prefix_span = document.createElement("span")
+			prefix_span.classList.add("dev-span") 
+			prefix_span.appendChild( document.createTextNode( "[DEV]" ) );
+			pname.appendChild( prefix_span );
+
+			pname.appendChild( document.createTextNode( " "+player_name ) );
+		} else {
+			if( custom_name_styles.hasOwnProperty(score.player_id) ){
+				name_style = document.createElement("span")
+				name_style.classList.add(custom_name_styles[score.player_id])
+				name_style.appendChild( document.createTextNode( score.player_name ) )
+				pname.appendChild(name_style)
+			} else {
+				pname.appendChild( document.createTextNode( score.player_name ) );
+			}
+		}
 	} else {
 		pname.appendChild( document.createTextNode( friendly_lb(score.board) ) );
 	}

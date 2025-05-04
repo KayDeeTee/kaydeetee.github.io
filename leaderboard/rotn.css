@@ -193,6 +193,18 @@ select{
   visibility: visible;
 }
 
+.main-dev {
+  background: linear-gradient(120deg,#5bcefa,#5bcefa,#f5a9b8,#f5a9b8,#fff,#f5a9b8,#f5a9b8,#5bcefa,#5bcefa);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dev-span {
+  margin-right: 8px;
+  color: #187ea8;
+}
+
 @media (max-aspect-ratio: 1/1){
   .flex-body {
     flex-direction: column;
