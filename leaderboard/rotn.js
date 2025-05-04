@@ -919,7 +919,9 @@ var all_charts = {
 }
 
 var custom_name_styles = {
-	"8bc8f869-23ba-4d3b-a6d1-6646d51f5d30": "main-dev"
+	"8bc8f869-23ba-4d3b-a6d1-6646d51f5d30": "main-dev",
+	"21797726-7189-487d-8d38-54b5d5cf0504": "rondo-winner", //Bun
+	"080dcc9e-ced2-4e00-b306-d615f60a3425": "rondo-winner", //Kerem
 }
 
 function sort_leaderboard_avg_rank(){
