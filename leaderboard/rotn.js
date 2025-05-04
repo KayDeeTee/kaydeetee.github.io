@@ -31,6 +31,10 @@ var valid_boards = [
 "P_C_H_DLCBanana03",
 "P_C_H_DLCBanana04",
 "P_C_H_DLCBanana05",
+"P_C_H_DLCCherry01",
+"P_C_H_DLCCherry02",
+"P_C_H_DLCCherry03",
+"P_C_H_DLCCherry04",
 "P_C_H_DLCOG02",
 "P_C_H_DLCOG07",
 "P_C_H_DLCOG06",
@@ -74,6 +78,10 @@ var valid_boards = [
 "P_C_X_DLCBanana03",
 "P_C_X_DLCBanana04",
 "P_C_X_DLCBanana05",
+"P_C_X_DLCCherry01",
+"P_C_X_DLCCherry02",
+"P_C_X_DLCCherry03",
+"P_C_X_DLCCherry04",
 "P_C_X_DLCOG02",
 "P_C_X_DLCOG07",
 "P_C_X_DLCOG06",
@@ -540,6 +548,10 @@ var valid_boards = [
 "P_C_E_DLCBanana03",
 "P_C_E_DLCBanana04",
 "P_C_E_DLCBanana05",
+"P_C_E_DLCCherry01",
+"P_C_E_DLCCherry02",
+"P_C_E_DLCCherry03",
+"P_C_E_DLCCherry04",
 "P_C_E_DLCOG02",
 "P_C_E_DLCOG07",
 "P_C_E_DLCOG06",
@@ -583,6 +595,10 @@ var valid_boards = [
 "P_C_M_DLCBanana03",
 "P_C_M_DLCBanana04",
 "P_C_M_DLCBanana05",
+"P_C_M_DLCCherry01",
+"P_C_M_DLCCherry02",
+"P_C_M_DLCCherry03",
+"P_C_M_DLCCherry04",
 "P_C_M_DLCOG02",
 "P_C_M_DLCOG07",
 "P_C_M_DLCOG06",
@@ -896,6 +912,10 @@ var all_charts = {
 	"DLCOG02":{ "name":  "Crypteque"},
  	"DLCOG07":{ "name":  "Fungal Funk"},
 	"DLCOG06":{ "name":  "Power Cords"},
+	"DLCCherry01":{ "name": "DLCCherry01"},
+	"DLCCherry02":{ "name": "DLCCherry02"},
+	"DLCCherry03":{ "name": "DLCCherry03"},
+	"DLCCherry04":{ "name": "DLCCherry04"},
 }
 
 function sort_leaderboard_avg_rank(){
@@ -1074,20 +1094,32 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 	var is_cheater = false
 	if( score.cheated ){ is_cheater = true }
 	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ is_cheater = true }
+	if( Number(score.vibes) > Number(score.vibe_chains_hit) ){ is_cheater = true }
+	if( Number(score.max_possible_vibes) != -1 && Number(score.vibes) > Number(score.max_possible_vibes) ){ is_cheater = true }
+	if( score.max_possible_hits != -1 && (score.total_perfects + score.total_greats + score.total_goods + score.total_oks + score.total_misses > score.max_possible_hits) ){ is_cheater = true}
+
+	for( i = 1; i < score.vibe_times; i++ ){
+		prev_vibe = Number(score.vibe_times[i-1])
+		curr_vibe = Number(score.vibe_times[i])
+		if( (curr_vibe - prev_vibe) < 4.5 ) { //activating vibe more frequently than possible (minor leniency)
+			is_cheater = true
+		}
+	}
 
 	if( score.total_misses + score.total_oks + score.total_goods + score.total_greats == 0 ){
-		console.log( "PFC" )
 		var bonus_points = score.score - get_basic_score( score, is_cheater )
-		console.log( bonus_points )
 		if( bonus_points == (score.total_perfects * 2) ){
-			console.log( "cheater" )
 			is_cheater = true
 			score.cheated = true
 		}
 	}
 
 	var trow = document.createElement("div")
-	if( is_cheater ){ trow.classList.add("table-cheater") }
+	if( is_cheater ){ 
+		trow.classList.add("table-cheater") 
+	} else {
+		trow.classList.add("table-legit") 
+	}
 	trow.classList.add("table-row")
 	if( rows % 2 == 0 ){
 		trow.classList.add("table-dark")
@@ -1290,13 +1322,24 @@ function generate_leaderboards( json_objects ) {
 			var score = lb.scores[s]
 			score.rank = rank
 
+			score.max_possible_hits = -1
+			score.max_possible_vibes = -1
+			if( lb.hasOwnProperty("max_hits") ){
+				score.max_possible_hits = Number(lb.max_hits)
+			}
+			if( lb.hasOwnProperty("vibe_chains") ){
+				score.max_possible_vibes = Number(lb.vibe_chains)
+			}
+
 			//console.log(score)
 			if( !generate_row( leaderboard_table, score, rows ) ){
 				rank += 1
+				rows += 1
 			} else {
-				if( hide_cheaters ) rows -= 1;
+				//if( hide_cheaters ) rows -= 1;
 			}
-			rows += 1
+			
+			
 		}
 		//console.log(lb)
 	} else {
@@ -1545,11 +1588,18 @@ function get_player_scores( json_objects, pid ){
 	rows = 0
 	for( j in json_objects ){
 		var json = json_objects[j]
-
 		for( s in json.scores ){
 			var score = json.scores[s]
 			if( score.player_id == pid ){
 				score.board = json.name
+				score.max_possible_hits = -1
+				score.max_possible_vibes = -1
+				if( json.hasOwnProperty("max_hits") ){
+					score.max_possible_hits = Number(json.max_hits)
+				}
+				if( json.hasOwnProperty("vibe_chains") ){
+					score.max_possible_vibes = Number(json.vibe_chains)
+				}
 				score.rank = s
 				scores.push( score )
 				player_name = score.player_name
