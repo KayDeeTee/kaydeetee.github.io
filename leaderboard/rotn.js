@@ -924,6 +924,30 @@ var custom_name_styles = {
 	"080dcc9e-ced2-4e00-b306-d615f60a3425": "rondo-winner", //Kerem
 }
 
+function formatted_player_name( player_id, player_name ){
+	pname = document.createElement("span")
+	if( player_name.startsWith( "<color=#187ea8>[DEV] </color>" ) ){
+		player_name = player_name.replace("<color=#187ea8>[DEV] </color>", "")
+
+		prefix_span = document.createElement("span")
+		prefix_span.classList.add("dev-span") 
+		prefix_span.appendChild( document.createTextNode( "[DEV]" ) );
+		pname.appendChild( prefix_span );
+
+		pname.appendChild( document.createTextNode( " "+player_name ) );
+	} else {
+		if( custom_name_styles.hasOwnProperty(player_id) ){
+			name_style = document.createElement("span")
+			name_style.classList.add(custom_name_styles[player_id])
+			name_style.appendChild( document.createTextNode( player_name ) )
+			pname.appendChild(name_style)
+		} else {
+			pname.appendChild( document.createTextNode( player_name) );
+		}
+	}
+	return pname
+}
+
 function sort_leaderboard_avg_rank(){
 	var lb = document.getElementById('leaderboard')
 	var e = lb.children
@@ -1154,25 +1178,8 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 		pname.classList.add("clickable")
 		pname.addEventListener('click', showPlayerDetails, false )
 		pname.player_id = score.player_id
-		if( score.player_name.startsWith( "<color=#187ea8>[DEV] </color>" ) ){
-			player_name = score.player_name.replace("<color=#187ea8>[DEV] </color>", "")
-
-			prefix_span = document.createElement("span")
-			prefix_span.classList.add("dev-span") 
-			prefix_span.appendChild( document.createTextNode( "[DEV]" ) );
-			pname.appendChild( prefix_span );
-
-			pname.appendChild( document.createTextNode( " "+player_name ) );
-		} else {
-			if( custom_name_styles.hasOwnProperty(score.player_id) ){
-				name_style = document.createElement("span")
-				name_style.classList.add(custom_name_styles[score.player_id])
-				name_style.appendChild( document.createTextNode( score.player_name ) )
-				pname.appendChild(name_style)
-			} else {
-				pname.appendChild( document.createTextNode( score.player_name ) );
-			}
-		}
+		sub_player = formatted_player_name( score.player_id, score.player_name )
+		pname.appendChild( sub_player )
 	} else {
 		pname.appendChild( document.createTextNode( friendly_lb(score.board) ) );
 	}
@@ -1632,8 +1639,11 @@ function get_player_scores( json_objects, pid ){
 		}
 	}
 
+	sub_player = formatted_player_name( pid, player_name )
+
 	scount.innerHTML = ""
-	scount.appendChild( document.createTextNode( player_name + " has " + count + " scores" ) )
+	scount.appendChild( sub_player )
+	scount.appendChild( document.createTextNode( " has " + count + " scores" ) )
 
 	scores.sort( (a,b) => { return Number(a.rank) > Number(b.rank) } )
 
