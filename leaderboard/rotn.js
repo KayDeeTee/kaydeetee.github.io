@@ -912,10 +912,10 @@ var all_charts = {
 	"DLCOG02":{ "name":  "Crypteque"},
  	"DLCOG07":{ "name":  "Fungal Funk"},
 	"DLCOG06":{ "name":  "Power Cords"},
-	"DLCCherry01":{ "name": "DLCCherry01"},
-	"DLCCherry02":{ "name": "DLCCherry02"},
-	"DLCCherry03":{ "name": "DLCCherry03"},
-	"DLCCherry04":{ "name": "DLCCherry04"},
+	"DLCCherry01":{ "name": "It's Pizza Time!"},
+	"DLCCherry02":{ "name": "The Death That I Deservioli"},
+	"DLCCherry03":{ "name": "Unexpectancy, Pt. 3"},
+	"DLCCherry04":{ "name": "World Wide Noise"},
 }
 
 var custom_name_styles = {
