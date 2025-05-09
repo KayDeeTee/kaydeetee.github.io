@@ -1086,7 +1086,8 @@ function generate_row_manual(leaderboard_table, rank, name, score, accuracy, det
 	pname.classList.add("clickable")
 	pname.addEventListener('click', showPlayerDetails, false )
 	pname.player_id = player_id
-	pname.appendChild( document.createTextNode( name ) );
+	sub_player = formatted_player_name( player_id, name )
+	pname.appendChild( sub_player );
 	tgrid.appendChild(pname)
 
 	var pscore = document.createElement("div")
