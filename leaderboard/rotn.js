@@ -1137,7 +1137,7 @@ function generate_row( leaderboard_table, score, rows, replace_name_with_board=f
 		}
 	}
 
-	if( score.pfc ){
+	if( score.pfc && !score.dnf ){
 		var bonus_points = score.score - get_basic_score( score, is_cheater )
 		if( bonus_points == (score.total_perfects * 2) ){
 			is_cheater = true
