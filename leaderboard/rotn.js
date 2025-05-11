@@ -1057,6 +1057,30 @@ function friendly_lb( lb_name ){
 
 }
 
+function cheat_detect( score ){
+	if( score.cheated ){ return true }
+	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ return true }
+	if( Number(score.vibes) > Number(score.vibe_chains_hit) ){ is_cheater = true }
+	if( Number(score.max_possible_vibes) != -1 && Number(score.vibes) > Number(score.max_possible_vibes) ){ return true }
+	if( score.max_possible_hits != -1 && (score.total_perfects + score.total_greats + score.total_goods + score.total_oks + score.total_misses > score.max_possible_hits) ){ return true}
+
+	for( i = 1; i < score.vibe_times; i++ ){
+		prev_vibe = Number(score.vibe_times[i-1])
+		curr_vibe = Number(score.vibe_times[i])
+		if( (curr_vibe - prev_vibe) < 4.5 ) { //activating vibe more frequently than possible (minor leniency)
+			return true
+		}
+	}
+
+	if( score.pfc && !score.dnf ){
+		var bonus_points = score.score - get_basic_score( score, false )
+		if( bonus_points == (score.total_perfects * 2) ){
+			return true
+		}
+	}
+	return false
+}
+
 function generate_row_manual(leaderboard_table, rank, name, score, accuracy, details, vibe, rows, is_cheater, player_id ){
 	var trow = document.createElement("div")
 	
@@ -1064,6 +1088,7 @@ function generate_row_manual(leaderboard_table, rank, name, score, accuracy, det
 		trow.classList.add("table-cheater") 
 	} else {
 		trow.classList.add("table-row")
+		trow.classList.add("table-legit")
 	}
 
 
@@ -1122,28 +1147,8 @@ function generate_row_manual(leaderboard_table, rank, name, score, accuracy, det
 }
 
 function generate_row( leaderboard_table, score, rows, replace_name_with_board=false ){
-	var is_cheater = false
-	if( score.cheated ){ is_cheater = true }
-	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ is_cheater = true }
-	if( Number(score.vibes) > Number(score.vibe_chains_hit) ){ is_cheater = true }
-	if( Number(score.max_possible_vibes) != -1 && Number(score.vibes) > Number(score.max_possible_vibes) ){ is_cheater = true }
-	if( score.max_possible_hits != -1 && (score.total_perfects + score.total_greats + score.total_goods + score.total_oks + score.total_misses > score.max_possible_hits) ){ is_cheater = true}
-
-	for( i = 1; i < score.vibe_times; i++ ){
-		prev_vibe = Number(score.vibe_times[i-1])
-		curr_vibe = Number(score.vibe_times[i])
-		if( (curr_vibe - prev_vibe) < 4.5 ) { //activating vibe more frequently than possible (minor leniency)
-			is_cheater = true
-		}
-	}
-
-	if( score.pfc && !score.dnf ){
-		var bonus_points = score.score - get_basic_score( score, is_cheater )
-		if( bonus_points == (score.total_perfects * 2) ){
-			is_cheater = true
-			score.cheated = true
-		}
-	}
+	var is_cheater = cheat_detect( score )
+	score.cheated = is_cheater
 
 	var trow = document.createElement("div")
 	if( is_cheater ){ 
@@ -1390,9 +1395,12 @@ function generate_leaderboards( json_objects ) {
 				diff = 1
 			}
 
+			var cheaters = 0
 			for( s in scores ){
 				var score = scores[s]
 				var rel_score = (score.score-last_score.score)/diff
+
+				if( cheat_detect(score) ) cheaters += 1
 
 				if( players[score.player_id] == undefined ){
 					players[score.player_id] = {}
@@ -1407,12 +1415,15 @@ function generate_leaderboards( json_objects ) {
 				}
 				players[score.player_id]["score"] += Math.floor( rel_score * rel_score * 10000 )
 				players[score.player_id]["acc"] += get_acc_for_score( score, false )
-				players[score.player_id]["scores"] += 1
-				players[score.player_id]["rank"] += Number(s)+1
-				if( s == 0 ){ players[score.player_id]["firsts"] += 1 }
+				players[score.player_id]["scores"] += 1				
 
-				if( score.cheated ){ players[score.player_id]["is_cheater"] = true }
-				if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ players[score.player_id]["is_cheater"] = true }
+				if( cheat_detect( score ) ){
+					players[score.player_id]["is_cheater"] = true
+					cheaters += 1
+				} else {
+					if( s-cheaters == 0 ){ players[score.player_id]["firsts"] += 1 }
+					players[score.player_id]["rank"] += Number(s-cheaters)+1
+				}
 
 			}
 		}
@@ -1619,6 +1630,7 @@ function get_player_scores( json_objects, pid ){
 	var player_name = ""
 	rows = 0
 	for( j in json_objects ){
+		var cheaters = 0
 		var json = json_objects[j]
 		for( s in json.scores ){
 			var score = json.scores[s]
@@ -1632,10 +1644,12 @@ function get_player_scores( json_objects, pid ){
 				if( json.hasOwnProperty("vibe_chains") ){
 					score.max_possible_vibes = Number(json.vibe_chains)
 				}
-				score.rank = s
+				score.rank = s - cheaters
 				scores.push( score )
 				player_name = score.player_name
 				count += 1
+			} else {
+				if( cheat_detect( score ) ){ cheaters += 1 }
 			}
 		}
 	}
