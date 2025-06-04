@@ -1,4 +1,5 @@
 {
+    "max_hits": -1,
     "name": "P_C_E_R_CD_RRReaper",
     "scores": [
         {
@@ -14,19 +15,43 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 3
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 24
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 9
                 }
             ],
-            "average": -0.0111,
-            "base_score": 6660,
+            "average": -0.006,
+            "base_score": 23976,
             "cheated": false,
             "create_epoch": 1742000734811,
             "dnf": true,
             "fc": false,
-            "holds_hit": 6,
+            "holds_hit": 28,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
@@ -41,32 +66,61 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 3
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 3
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 24
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 2
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 9
+                        }
+                    ],
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 13,
+            "max_combo": 63,
             "pfc": false,
             "player_id": "f02d7bbb-5d26-4576-9f00-f858dafdc321",
             "player_name": "MolsheimSausage",
-            "score": 1088,
+            "score": 13592,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 13,
-            "update_epoch": 1742000776128,
-            "vibe_chains_hit": 0,
+            "total_perfects": 63,
+            "update_epoch": 1746220558644,
+            "vibe_chains_hit": 1,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_duration": 5.1367,
+            "vibe_times": [
+                87.979
+            ],
+            "vibes": 1
         },
         {
             "InputMults": [
@@ -264,5 +318,6 @@
             "vibe_times": [],
             "vibes": 0
         }
-    ]
+    ],
+    "vibe_chains": 0
 }

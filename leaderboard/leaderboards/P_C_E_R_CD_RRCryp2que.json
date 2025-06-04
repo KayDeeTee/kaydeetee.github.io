@@ -1,4 +1,5 @@
 {
+    "max_hits": -1,
     "name": "P_C_E_R_CD_RRCryp2que",
     "scores": [
         {
@@ -105,7 +106,7 @@
             "max_combo": 114,
             "pfc": false,
             "player_id": "a5db9708-ceff-4ec2-9793-719d8232a9f4",
-            "player_name": "RenegadeLucien",
+            "player_name": "BoltFromTheGreen",
             "score": 24877,
             "total_goods": 0,
             "total_greats": 0,
@@ -359,11 +360,19 @@
                     "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 6
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 2
                 }
             ],
-            "average": 0.0041,
-            "base_score": 6993,
+            "average": 0.0005,
+            "base_score": 9990,
             "cheated": false,
             "create_epoch": 1741666843156,
             "dnf": true,
@@ -383,23 +392,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 6
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 2
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 3
                 }
             ],
-            "max_combo": 16,
-            "pfc": true,
+            "max_combo": 22,
+            "pfc": false,
             "player_id": "f22a3075-ba8a-4a3b-a35f-e3809bb5c188",
             "player_name": "yord",
-            "score": 1222,
+            "score": 1999,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 16,
-            "update_epoch": 1741666867461,
+            "total_perfects": 22,
+            "update_epoch": 1746894420122,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
@@ -556,5 +578,6 @@
             "vibe_times": [],
             "vibes": 0
         }
-    ]
+    ],
+    "vibe_chains": 0
 }

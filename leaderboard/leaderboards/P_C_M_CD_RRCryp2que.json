@@ -1,4 +1,5 @@
 {
+    "max_hits": -1,
     "name": "P_C_M_CD_RRCryp2que",
     "scores": [
         {
@@ -30,22 +31,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 134
+                    "perfects": 287
                 },
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 0
+                    "perfects": 51
                 }
             ],
-            "average": 0.0004,
-            "base_score": 57942,
+            "average": 0.003,
+            "base_score": 126207,
             "cheated": false,
             "create_epoch": 1745454904021,
             "dnf": true,
@@ -83,7 +84,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 134
+                            "NumberOfInputs": 287
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -91,31 +96,32 @@
                 {
                     "InputRatingCountPairs": [
                         {
-                            "InputRating": "Miss",
-                            "NumberOfInputs": 1
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 51
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 164,
+            "max_combo": 368,
             "pfc": false,
             "player_id": "26934bc9-ca51-45b5-93ce-7dbc69a56979",
             "player_name": "Crazh",
-            "score": 33095,
+            "score": 89725,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 164,
-            "update_epoch": 1745455203720,
-            "vibe_chains_hit": 2,
+            "total_perfects": 368,
+            "update_epoch": 1747855253498,
+            "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0.2,
+            "vibe_duration": 20.0527,
             "vibe_times": [
-                159.962
+                157.0139,
+                256.0353
             ],
-            "vibes": 1
+            "vibes": 2
         },
         {
             "InputMults": [
@@ -221,7 +227,7 @@
             "max_combo": 123,
             "pfc": false,
             "player_id": "b64be11d-cb77-4589-bd6e-f98364c85d3e",
-            "player_name": "Alex_Ingrid_Weisshaarig",
+            "player_name": "Bread Hypostasis",
             "score": 26431,
             "total_goods": 0,
             "total_greats": 0,
@@ -1060,5 +1066,6 @@
             "vibe_times": [],
             "vibes": 0
         }
-    ]
+    ],
+    "vibe_chains": 0
 }
