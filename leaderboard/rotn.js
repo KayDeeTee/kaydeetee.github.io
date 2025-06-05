@@ -17,6 +17,7 @@ load_valid_boards()
 //var last_update = "2025-03-28 23:14:11"
 
 var all_charts = {
+	"Daily":{"name": "Daily"},
 	"RRDiscoDisaster":{ "name": "Disco Disaster"},
 	"RRElusional":{ "name": "Elusional"},
 	"RRVisualizeYourself":{ "name": "Visualize Yourself"},
@@ -207,16 +208,21 @@ function friendly_lb( lb_name ){
 
 function cheat_detect( score ){
 	if( score.cheated ){ 
+		console.log("python cheat detect")
 		return true 
 	}
 	if( Number(score.vibe_duration) > Number(score.vibe_chains_hit) * 5.35 ){ 
+		console.log("vibe_duration cheat detect")
 		return true
 	}
 	if( Number(score.vibes) > Number(score.vibe_chains_hit) ){ return true }
 	if( (Number(score.max_possible_vibes) != -1) && Number(score.vibes) > Number(score.max_possible_vibes) ){
+		console.log("max_possible_vibes cheat detect")
 		return true
 	}
 	if( (score.max_possible_hits != -1) && (score.total_perfects + score.total_greats + score.total_goods + score.total_oks + score.total_misses > score.max_possible_hits) ){ 
+		console.log("max_possible_hits cheat detect")
+		console.log(score.max_possible_hits )
 		return true 
 	}
 
@@ -231,6 +237,7 @@ function cheat_detect( score ){
 	if( score.pfc && !score.dnf ){
 		var bonus_points = score.score - get_basic_score( score, false )
 		if( bonus_points == (score.total_perfects * 2) ){
+			console.log("100% pfc cheat detect")
 			return true
 		}
 	}
@@ -510,6 +517,7 @@ function generate_leaderboards( json_objects ) {
 		var lb = json_objects[0]
 
 		var rank = 0
+		console.log(lb)
 
 		for( s in lb.scores ){
 			var score = lb.scores[s]
@@ -672,9 +680,20 @@ function repopulate_leaderboard(){
 				for( d in diffs ){
 					for( c in charts ){
 						var l_id = ""+prod[p]+diffs[d]+remixes[r]+mods[m]+charts[c]
+
+						if( charts[c] == "Daily" ){
+							if( diffs[d] == "E_") l_id = "DailyE"
+							if( diffs[d] == "M_") l_id = "DailyM"
+							if( diffs[d] == "H_") l_id = "DailyH"
+							if( diffs[d] == "X_") l_id = "DailyX"
+						}
+
+
 						if( valid_boards.indexOf(l_id) > -1 ){
 							var b = 'leaderboards/'+l_id+'.json'
-							boards.push(b)		
+							if( !boards.includes( b ) ){
+								boards.push(b)	
+							}							
 						}									
 					}					
 				}
