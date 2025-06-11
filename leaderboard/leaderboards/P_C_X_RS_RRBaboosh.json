@@ -226,75 +226,83 @@
         {
             "InputMults": [
                 {
-                    "goods": 12,
-                    "greats": 84,
-                    "misses": 8,
-                    "mult": 1,
-                    "oks": 5,
-                    "perfects": 224
-                },
-                {
-                    "goods": 10,
+                    "goods": 15,
                     "greats": 66,
-                    "misses": 5,
-                    "mult": 2,
-                    "oks": 1,
-                    "perfects": 161
+                    "misses": 2,
+                    "mult": 1,
+                    "oks": 6,
+                    "perfects": 119
                 },
                 {
-                    "goods": 2,
-                    "greats": 33,
-                    "misses": 2,
+                    "goods": 5,
+                    "greats": 64,
+                    "misses": 9,
+                    "mult": 2,
+                    "oks": 7,
+                    "perfects": 118
+                },
+                {
+                    "goods": 6,
+                    "greats": 25,
+                    "misses": 0,
                     "mult": 3,
-                    "oks": 3,
-                    "perfects": 84
+                    "oks": 2,
+                    "perfects": 73
                 },
                 {
                     "goods": 11,
-                    "greats": 43,
-                    "misses": 5,
+                    "greats": 104,
+                    "misses": 3,
                     "mult": 4,
                     "oks": 2,
-                    "perfects": 136
+                    "perfects": 247
                 },
                 {
                     "goods": 0,
-                    "greats": 3,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 6,
                     "oks": 0,
-                    "perfects": 5
+                    "perfects": 1
+                },
+                {
+                    "goods": 0,
+                    "greats": 5,
+                    "misses": 1,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 21
                 }
             ],
-            "average": 0.0111,
+            "average": 0.0186,
             "base_score": 305028,
             "cheated": false,
             "create_epoch": 1748099540842,
             "dnf": false,
             "fc": false,
-            "holds_hit": 160,
+            "holds_hit": 161,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 224
+                            "NumberOfInputs": 119
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 84
+                            "NumberOfInputs": 66
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 12
+                            "NumberOfInputs": 15
                         },
                         {
                             "InputRating": "Ok",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 6
                         },
                         {
                             "InputRating": "Miss",
-                            "NumberOfInputs": 8
+                            "NumberOfInputs": 2
                         }
                     ],
                     "MultiplierValue": 1
@@ -303,23 +311,23 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 161
+                            "NumberOfInputs": 118
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 66
+                            "NumberOfInputs": 64
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 5
                         },
                         {
                             "InputRating": "Ok",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 7
                         },
                         {
                             "InputRating": "Miss",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 9
                         }
                     ],
                     "MultiplierValue": 2
@@ -328,22 +336,18 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 84
+                            "NumberOfInputs": 73
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 33
+                            "NumberOfInputs": 25
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 2
+                            "NumberOfInputs": 6
                         },
                         {
                             "InputRating": "Ok",
-                            "NumberOfInputs": 3
-                        },
-                        {
-                            "InputRating": "Miss",
                             "NumberOfInputs": 2
                         }
                     ],
@@ -353,11 +357,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 136
+                            "NumberOfInputs": 247
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 43
+                            "NumberOfInputs": 104
                         },
                         {
                             "InputRating": "Good",
@@ -369,7 +373,7 @@
                         },
                         {
                             "InputRating": "Miss",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 3
                         }
                     ],
                     "MultiplierValue": 4
@@ -378,33 +382,50 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 1
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 3
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 6
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 21
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 5
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 76,
+            "max_combo": 137,
             "pfc": false,
             "player_id": "b2376b9b-9d12-42e7-9870-147ddbd20c20",
             "player_name": "DOCtorKamski",
-            "score": 1004194,
-            "total_goods": 35,
-            "total_greats": 229,
-            "total_misses": 20,
-            "total_oks": 11,
-            "total_perfects": 610,
-            "update_epoch": 1748099540842,
-            "vibe_chains_hit": 2,
-            "vibe_chains_missed": 4,
-            "vibe_duration": 8.5807,
+            "score": 1284002,
+            "total_goods": 37,
+            "total_greats": 265,
+            "total_misses": 15,
+            "total_oks": 17,
+            "total_perfects": 579,
+            "update_epoch": 1749237067705,
+            "vibe_chains_hit": 5,
+            "vibe_chains_missed": 1,
+            "vibe_duration": 20.0237,
             "vibe_times": [
-                224.6055,
-                502.8409
+                316.6872,
+                454.2496
             ],
             "vibes": 2
         },
