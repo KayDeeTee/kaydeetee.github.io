@@ -764,11 +764,11 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 10
+                    "perfects": 9
                 },
                 {
                     "goods": 0,
@@ -787,23 +787,23 @@
                     "perfects": 10
                 },
                 {
-                    "goods": 1,
-                    "greats": 38,
+                    "goods": 0,
+                    "greats": 31,
                     "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 1085
+                    "perfects": 1093
                 },
                 {
                     "goods": 0,
-                    "greats": 19,
+                    "greats": 20,
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 247
+                    "perfects": 246
                 }
             ],
-            "average": 0.0008,
+            "average": 0.0001,
             "base_score": 472860,
             "cheated": false,
             "create_epoch": 1739967267520,
@@ -815,7 +815,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 1
@@ -846,15 +850,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 1085
+                            "NumberOfInputs": 1093
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 38
-                        },
-                        {
-                            "InputRating": "Good",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 31
                         }
                     ],
                     "MultiplierValue": 4
@@ -863,11 +863,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 247
+                            "NumberOfInputs": 246
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 19
+                            "NumberOfInputs": 20
                         }
                     ],
                     "MultiplierValue": 8
@@ -877,21 +877,21 @@
             "pfc": false,
             "player_id": "ed59f0a3-002f-4c6e-96fa-184d2ad18a95",
             "player_name": "PataChu",
-            "score": 3775425,
-            "total_goods": 1,
-            "total_greats": 58,
+            "score": 3780865,
+            "total_goods": 0,
+            "total_greats": 53,
             "total_misses": 0,
             "total_oks": 0,
-            "total_perfects": 1361,
-            "update_epoch": 1744286559695,
+            "total_perfects": 1367,
+            "update_epoch": 1749741421104,
             "vibe_chains_hit": 5,
             "vibe_chains_missed": 0,
-            "vibe_duration": 25.1328,
+            "vibe_duration": 25.0841,
             "vibe_times": [
-                175.8055,
-                359.0151,
-                494.9656,
-                679.9664
+                175.9552,
+                359.2369,
+                494.9933,
+                680.1455
             ],
             "vibes": 4
         },
