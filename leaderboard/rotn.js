@@ -69,7 +69,7 @@ var all_charts = {
 	"DLCDurian02":{ "name": "Miku02"},
 	"DLCDurian03":{ "name": "Miku03"},
 	"DLCDurian04":{ "name": "Miku04"},
-	"DLCDurian05":{ "name": "Miku05"},
+	"DLCDurian05":{ "name": "Miku05"}
 }
 
 var custom_name_styles = {
