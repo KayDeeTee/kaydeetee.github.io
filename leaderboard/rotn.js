@@ -65,6 +65,11 @@ var all_charts = {
 	"DLCCherry02":{ "name": "The Death That I Deservioli"},
 	"DLCCherry03":{ "name": "Unexpectancy, Pt. 3"},
 	"DLCCherry04":{ "name": "World Wide Noise"},
+	"DLCKiwi01":{ "name": "Too Real"},
+	"DLCKiwi02":{ "name": "M@GICAL☆CURE! LOVE♥SHOT!"},
+	"DLCKiwi03":{ "name": "Intergalatic Bound"},
+	"DLCKiwi04":{ "name": "Just 1db Louder"},
+	"DLCKiwi05":{ "name": "Mikufiesta"}
 }
 
 var custom_name_styles = {
