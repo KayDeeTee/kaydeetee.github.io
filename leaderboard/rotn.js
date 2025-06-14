@@ -69,7 +69,8 @@ var all_charts = {
 	"DLCKiwi02":{ "name": "M@GICAL☆CURE! LOVE♥SHOT!"},
 	"DLCKiwi03":{ "name": "Intergalatic Bound"},
 	"DLCKiwi04":{ "name": "Just 1db Louder"},
-	"DLCKiwi05":{ "name": "Mikufiesta"}
+	"DLCKiwi05":{ "name": "Mikufiesta"},
+	"DLCKiwi06":{ "name": "Radiant Revival"}
 }
 
 var custom_name_styles = {
