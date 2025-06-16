@@ -181,6 +181,18 @@ function get_acc_for_score( score, is_cheater ){
 }
 
 function friendly_lb( lb_name ){
+	if( lb_name == "DailyE" ){
+		return "Daily E"
+	}
+	if( lb_name == "DailyM" ){
+		return "Daily M"
+	}
+	if( lb_name == "DailyH" ){
+		return "Daily H"
+	}
+	if( lb_name == "DailyX" ){
+		return "Daily X"
+	}
 	var lb_name = lb_name.slice(4)
 	var data = lb_name.split("_")
 	var diff = data[0]
