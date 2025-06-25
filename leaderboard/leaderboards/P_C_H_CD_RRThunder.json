@@ -269,13 +269,21 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 263
+                    "perfects": 241
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 22
                 }
             ],
-            "average": 0.0071,
+            "average": 0.0001,
             "base_score": 102897,
             "cheated": false,
             "create_epoch": 1743934890430,
@@ -314,32 +322,43 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 263
+                            "NumberOfInputs": 241
+                        }
+                    ],
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 22
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 4
+                    "MultiplierValue": 8
                 }
             ],
             "max_combo": 293,
             "pfc": false,
             "player_id": "ac50e97b-a0a1-49a4-85f8-e38c5a7afb41",
             "player_name": "slime900",
-            "score": 61744,
+            "score": 66633,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
             "total_perfects": 293,
-            "update_epoch": 1743935110297,
+            "update_epoch": 1749906172530,
             "vibe_chains_hit": 2,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_duration": 5.8252,
+            "vibe_times": [
+                168.8871
+            ],
+            "vibes": 1
         },
         {
             "InputMults": [
@@ -731,7 +750,7 @@
             "max_combo": 49,
             "pfc": false,
             "player_id": "c490eb33-0d0f-48cd-9491-e14b9c5e03cf",
-            "player_name": "THP",
+            "player_name": "NPS",
             "score": 7552,
             "total_goods": 0,
             "total_greats": 0,
