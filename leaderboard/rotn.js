@@ -70,7 +70,12 @@ var all_charts = {
 	"DLCKiwi03":{ "name": "Intergalatic Bound"},
 	"DLCKiwi04":{ "name": "Just 1db Louder"},
 	"DLCKiwi05":{ "name": "Mikufiesta"},
-	"DLCKiwi06":{ "name": "Radiant Revival"}
+	"DLCKiwi06":{ "name": "Radiant Revival"},
+	"DLCGuava01":{ "name": "DLCGuava01"},
+	"DLCGuava02":{ "name": "DLCGuava02"},
+	"DLCGuava03":{ "name": "DLCGuava03"},
+	"DLCGuava04":{ "name": "DLCGuava04"},
+	"DLCGuava05":{ "name": "DLCGuava05"}
 }
 
 var custom_name_styles = {
