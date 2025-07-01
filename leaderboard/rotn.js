@@ -84,6 +84,10 @@ var custom_name_styles = {
 	"080dcc9e-ced2-4e00-b306-d615f60a3425": "rondo-winner", //Kerem
 }
 
+var cheat_false_flags = { 
+"475971a0-96ec-4686-b2c0-3884119c00a3": "true",
+}
+
 function formatted_player_name( player_id, player_name ){
 	pname = document.createElement("span")
 	if( player_name.startsWith( "<color=#187ea8>[DEV] </color>" ) ){
@@ -230,6 +234,9 @@ function friendly_lb( lb_name ){
 }
 
 function cheat_detect( score ){
+	if( cheat_false_flags.hasOwnProperty(score.player_id) ){
+	return false
+	}
 	if( score.cheated ){ 
 		console.log("python cheat detect")
 		return true 
