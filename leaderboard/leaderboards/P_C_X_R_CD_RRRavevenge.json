@@ -31,19 +31,27 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 73
+                    "perfects": 122
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 32
                 }
             ],
-            "average": -0.0025,
-            "base_score": 38295,
+            "average": 0.0001,
+            "base_score": 64602,
             "cheated": false,
             "create_epoch": 1746415997503,
             "dnf": true,
             "fc": false,
-            "holds_hit": 0,
+            "holds_hit": 10,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
@@ -76,28 +84,43 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 73
+                            "NumberOfInputs": 122
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 32
+                        }
+                    ],
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 103,
-            "pfc": true,
+            "max_combo": 184,
+            "pfc": false,
             "player_id": "dbe17c2d-b3f0-49e3-8458-b5e613aef5c4",
             "player_name": "EmergentSea",
-            "score": 19545,
+            "score": 44974,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 103,
-            "update_epoch": 1750449291246,
+            "total_perfects": 184,
+            "update_epoch": 1752120289626,
             "vibe_chains_hit": 1,
-            "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_chains_missed": 1,
+            "vibe_duration": 5.0706,
+            "vibe_times": [
+                92.5787
+            ],
+            "vibes": 1
         },
         {
             "InputMults": [
@@ -142,7 +165,7 @@
                     "perfects": 16
                 }
             ],
-            "average": 0.0044,
+            "average": 0.0031,
             "base_score": 31635,
             "cheated": false,
             "create_epoch": 1750776044757,
@@ -204,18 +227,18 @@
             "pfc": false,
             "player_id": "1a96865b-53ff-4e82-b54a-275a79093e1d",
             "player_name": "imhinder",
-            "score": 19543,
+            "score": 19544,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
             "total_perfects": 87,
-            "update_epoch": 1751850322822,
+            "update_epoch": 1752410768623,
             "vibe_chains_hit": 1,
             "vibe_chains_missed": 0,
-            "vibe_duration": 2.6519,
+            "vibe_duration": 2.5391,
             "vibe_times": [
-                69.2923
+                69.7684
             ],
             "vibes": 1
         },

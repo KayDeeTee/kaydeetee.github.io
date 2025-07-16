@@ -712,16 +712,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 5
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 0
                 }
             ],
-            "average": -0.0106,
-            "base_score": 2997,
+            "average": -0.0026,
+            "base_score": 5994,
             "cheated": false,
-            "create_epoch": 1740732228820,
+            "create_epoch": 1752096306200,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -730,27 +738,32 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 5
-                        },
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 5,
+            "max_combo": 10,
             "pfc": false,
-            "player_id": "eb06fd18-cefe-4d80-8762-10e118fd414b",
-            "player_name": "critfinyti",
-            "score": 277,
+            "player_id": "f02d7bbb-5d26-4576-9f00-f858dafdc321",
+            "player_name": "MolsheimSausage",
+            "score": 555,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 5,
-            "update_epoch": 1740732589767,
+            "total_perfects": 10,
+            "update_epoch": 1752096306200,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
