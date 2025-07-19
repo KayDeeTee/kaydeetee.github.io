@@ -1407,30 +1407,30 @@
                 },
                 {
                     "goods": 0,
-                    "greats": 1,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
                 },
                 {
-                    "goods": 0,
+                    "goods": 1,
                     "greats": 29,
                     "misses": 0,
                     "mult": 4,
-                    "oks": 0,
-                    "perfects": 588
+                    "oks": 2,
+                    "perfects": 585
                 },
                 {
                     "goods": 0,
-                    "greats": 9,
+                    "greats": 4,
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 136
+                    "perfects": 141
                 }
             ],
-            "average": 0.0046,
+            "average": -0.0028,
             "base_score": 263736,
             "cheated": false,
             "create_epoch": 1741054264626,
@@ -1464,11 +1464,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 3
@@ -1477,11 +1473,19 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 588
+                            "NumberOfInputs": 585
                         },
                         {
                             "InputRating": "Great",
                             "NumberOfInputs": 29
+                        },
+                        {
+                            "InputRating": "Good",
+                            "NumberOfInputs": 1
+                        },
+                        {
+                            "InputRating": "Ok",
+                            "NumberOfInputs": 2
                         }
                     ],
                     "MultiplierValue": 4
@@ -1490,11 +1494,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 136
+                            "NumberOfInputs": 141
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 9
+                            "NumberOfInputs": 4
                         }
                     ],
                     "MultiplierValue": 8
@@ -1504,19 +1508,19 @@
             "pfc": false,
             "player_id": "b321179a-fb59-4c4b-84b1-a0f944dd270e",
             "player_name": "Quacksilver",
-            "score": 2062820,
-            "total_goods": 0,
-            "total_greats": 40,
+            "score": 2067533,
+            "total_goods": 1,
+            "total_greats": 34,
             "total_misses": 0,
-            "total_oks": 0,
-            "total_perfects": 752,
-            "update_epoch": 1750112666326,
+            "total_oks": 2,
+            "total_perfects": 755,
+            "update_epoch": 1752814726063,
             "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 20.1194,
+            "vibe_duration": 20.1106,
             "vibe_times": [
-                244.9879,
-                528.8129
+                244.9937,
+                528.7748
             ],
             "vibes": 2
         },
