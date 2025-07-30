@@ -151,14 +151,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 30
+                    "perfects": 55
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 1
                 }
             ],
-            "average": -0.0013,
-            "base_score": 25974,
+            "average": -0.0012,
+            "base_score": 35298,
             "cheated": false,
             "create_epoch": 1750601803167,
             "dnf": true,
@@ -196,32 +204,43 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 30
+                            "NumberOfInputs": 55
+                        }
+                    ],
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 1
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 4
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 60,
+            "max_combo": 86,
             "pfc": false,
             "player_id": "1a96865b-53ff-4e82-b54a-275a79093e1d",
             "player_name": "imhinder",
-            "score": 9996,
+            "score": 15992,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 60,
-            "update_epoch": 1752135447481,
-            "vibe_chains_hit": 0,
+            "total_perfects": 86,
+            "update_epoch": 1753777498802,
+            "vibe_chains_hit": 1,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_duration": 0.0521,
+            "vibe_times": [
+                50.5851
+            ],
+            "vibes": 1
         },
         {
             "InputMults": [
