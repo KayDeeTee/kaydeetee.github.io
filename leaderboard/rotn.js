@@ -75,7 +75,12 @@ var all_charts = {
 	"DLCGuava02":{ "name": "Reflect"},
 	"DLCGuava03":{ "name": "Play Dice!"},
 	"DLCGuava04":{ "name": "Ahoy!! 我ら宝鐘海賊団☆"},
-	"DLCGuava05":{ "name": "Carbonated Love"}
+	"DLCGuava05":{ "name": "Carbonated Love"},
+	"DLCEggplant01":{ "name": "The Final Battle"},
+	"DLCEggplant02":{ "name": "Feisty Flowers"},
+	"DLCEggplant03":{ "name": "Revenge"},
+	"DLCEggplant04":{ "name": "Why Oh You Are LOVE"},
+	"DLCEggplant05":{ "name": "Powers Of Destruction"},
 }
 
 var custom_name_styles = {
