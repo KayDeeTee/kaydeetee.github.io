@@ -4,7 +4,14 @@ var selected_remix = "NonRemix"
 var selected_coda = "NonCoda"
 var hide_cheaters = true
 
+var daily_info = {}
 var valid_boards = []
+
+async function load_daily_info(){
+	const daily_response = await fetch('daily.json')
+	const daily_json = await daily_response.json();
+	daily_info = daily_json
+}
 
 async function load_valid_boards(){
 	const boards_response = await fetch('boards.json')
@@ -12,6 +19,7 @@ async function load_valid_boards(){
 	valid_boards = boards_json["boards"]
 }
 
+load_daily_info()
 load_valid_boards()
 
 //var last_update = "2025-03-28 23:14:11"
@@ -555,6 +563,14 @@ function generate_leaderboards( json_objects ) {
 		var rank = 0
 		console.log(lb)
 
+		switch( lb.name ){
+			case "DailyE": get_daily_info("Easy"); break;
+			case "DailyM": get_daily_info("Medium"); break;
+			case "DailyH": get_daily_info("Hard"); break;
+			case "DailyX": get_daily_info("Impossible"); break;
+			default:
+		}
+
 		for( s in lb.scores ){
 			var score = lb.scores[s]
 			score.rank = rank
@@ -832,6 +848,28 @@ function listCharts(){
 	}
 
 }
+
+
+function get_daily_info( diff ){
+	var scount = document.getElementById("score_count")
+	scount.innerHTML = ""
+
+	var chart_id = daily_info["data"]["response"]["daily"]["song"]
+	var seed = ""
+	for( i in daily_info["data"]["response"]["daily"]["difficulties"] ){
+		if( daily_info["data"]["response"]["daily"]["difficulties"][i]["difficulty"] == diff ){
+			seed = daily_info["data"]["response"]["daily"]["difficulties"][i]["seed"]
+		}
+	}
+	
+	var cname = document.createElement("div")
+	cname.appendChild(document.createTextNode(  all_charts[chart_id].name + " : " + seed  ))
+
+	cname.classList.add("centered-text")
+
+	scount.appendChild( cname )
+}
+
 
 function get_player_scores( json_objects, pid ){
 	var scores = []
