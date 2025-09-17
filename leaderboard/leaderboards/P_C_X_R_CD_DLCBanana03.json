@@ -776,45 +776,62 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 5
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 3
                 }
             ],
-            "average": 0.0161,
-            "base_score": 4329,
+            "average": 0.0034,
+            "base_score": 9990,
             "cheated": false,
-            "create_epoch": 1743107853020,
+            "create_epoch": 1757794136683,
             "dnf": true,
             "fc": false,
-            "holds_hit": 6,
+            "holds_hit": 16,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 3
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 5,
+            "max_combo": 13,
             "pfc": false,
-            "player_id": "5998948f-a800-4d3c-9dba-4e93afa7683d",
-            "player_name": "Waski",
-            "score": 477,
+            "player_id": "89a035bf-f5e4-41fa-96c7-3fdf8ce90f1e",
+            "player_name": "Podak",
+            "score": 1422,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 5,
-            "update_epoch": 1743107853020,
+            "total_perfects": 13,
+            "update_epoch": 1757794153627,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
