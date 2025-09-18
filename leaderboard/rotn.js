@@ -89,6 +89,11 @@ var all_charts = {
 	"DLCEggplant03":{ "name": "Revenge"},
 	"DLCEggplant04":{ "name": "Why Oh You Are LOVE"},
 	"DLCEggplant05":{ "name": "Powers Of Destruction"},
+	"DLCMango01":{ "name": "Final Boss"},
+	"DLCMango02":{ "name": "New Game"},
+	"DLCMango03":{ "name": "Crab Rave"},
+	"DLCMango04":{ "name": "PLAY"},
+	"DLCMango05":{ "name": "Waiting For You"}
 }
 
 var custom_name_styles = {
