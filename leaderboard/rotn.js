@@ -17,12 +17,16 @@ async function load_valid_boards(){
 	const boards_response = await fetch('boards.json')
 	const boards_json = await boards_response.json();
 	valid_boards = boards_json["boards"]
+
+
+	loadParams()
 }
 
 load_daily_info()
 load_valid_boards()
 
 //var last_update = "2025-03-28 23:14:11"
+
 
 var all_charts = {
 	"Daily":{"name": "Daily"},
@@ -771,6 +775,70 @@ function repopulate_leaderboard(){
 	.then( jsonObjects => generate_leaderboards(jsonObjects) )
 }
 
+function get_leaderboard_set( charts, categories ){
+
+	var prod = ["P_C_"]
+
+	var diffs = []
+	var mods = []
+	var remixes = []
+	for( c in categories ){
+		console.log(categories[c])
+		switch( categories[c] ) {
+			case "Easy": diffs.push("E_"); break;
+			case "Medium": diffs.push("M_"); break;
+			case "Hard": diffs.push("H_"); break;
+			case "Impossible": diffs.push("X_"); break;
+			case "Mainboard": remixes.push(""); break;
+			case "Remix": remixes.push("R_"); break;
+			case "RemixSeeded": remixes.push("RS_"); break;
+			case "NoMod": mods.push(""); break;
+			case "Coda": mods.push("CD_"); break;
+		}
+	}
+
+	var boards = []
+
+	console.log( diffs )
+	console.log( mods )
+	console.log( remixes )
+	console.log( charts )
+
+	for( p in prod ){
+		for( r in remixes ){
+			for( m in mods ){
+				for( d in diffs ){
+					for( c in charts ){
+						var l_id = ""+prod[p]+diffs[d]+remixes[r]+mods[m]+charts[c]
+						console.log(l_id)
+						if( valid_boards.indexOf(l_id) > -1 ){
+							var b = 'leaderboards/'+l_id+'.json'
+							if( !boards.includes( b ) ){
+								boards.push(b)	
+							}							
+						}									
+					}					
+				}
+			}
+		}
+	}
+
+
+
+	var scount = document.getElementById("score_count")
+	scount.innerHTML = ""
+	var lb = document.getElementById("leaderboard")
+	lb.innerHTML = "";
+	console.log( boards )
+
+	var promises = boards.map(board => fetch(board))
+	
+	Promise.all(promises)
+	.then( responses => Promise.all( responses.map(r => r.json() ) ) )
+	.then( jsonObjects => generate_leaderboards(jsonObjects) )
+
+}
+
 function updateChart(){
 	var e = document.getElementById("chart")
 	selected_chart = e.value;
@@ -810,7 +878,63 @@ function toggleCheaters(){
 	}
 }
 
+function showAdvanced(){
+	var mainflex = document.getElementById("mainflex")
+	var adv_div = document.getElementById("advanced_search_box")
+
+	mainflex.classList.add("hidden")
+	adv_div.classList.remove("hidden")
+}
+
+function doAdvancedSearch(){
+	var song_checks = document.getElementsByClassName("adv_song_check")
+
+	var filtered_songs = []
+	for( song in song_checks ){
+		if( song_checks[song].checked ){
+			filtered_songs.push(song_checks[song].name)
+		}
+	}
+
+	var cat_checks = document.getElementsByClassName("adv_cat_check")
+	var filtered_cats = []
+
+	for( cat in cat_checks ){
+		if( cat_checks[cat].checked ){
+			filtered_cats.push(cat_checks[cat].name)
+		}
+	}
+
+	var url = window.location.href;
+	url = url.split("?")[0]
+
+	url = url + "?songs=" + filtered_songs.join(',')
+	url = url + "&cats=" + filtered_cats.join(',')
+
+	window.location.href = url;
+}
+
+function loadParams(){
+	var url = new URL(window.location.href)
+	var songs = url.searchParams.get("songs").split(",")
+	var cats = url.searchParams.get("cats").split(",")
+
+	if( songs.length > 0 && cats.length > 0 ){
+		get_leaderboard_set( songs, cats )
+	}
+}
+
 function listCharts(){
+
+	var url = new URL(window.location.href)
+	var showadv = url.searchParams.get("showadv")
+
+	if( showadv != null ){
+		var adv_search = document.getElementById("advanced_search")
+		adv_search.classList.remove("hidden")
+
+	} 
+
 	var footer = document.getElementById("footer")
 	footer.appendChild( document.createTextNode( "Last API Fetch : " + last_update + " UTC" ) )
 
@@ -833,6 +957,10 @@ function listCharts(){
 
 	var e = document.getElementById("chart")
 
+	var adv_songs = document.getElementById("advanced_song_list_inner")
+
+	var adv_cat = document.getElementById("advanced_cat_list_inner")
+
 	var items = Object.keys(all_charts).map(function(key) {
   		return [key, all_charts[key]];
 	});
@@ -845,13 +973,52 @@ function listCharts(){
 		item = items[i]
 		var n = item[1].name
 
+		if( n == "Daily") continue;
+
 		var opt = document.createElement("option")
 		opt.value = item[0]
 		var text = document.createTextNode(n);
 		opt.appendChild(text);
 		e.appendChild(opt);
+
+		var check_cont = document.createElement("div")
+		//width: 100%;flex-basis: auto;
+
+		var check = document.createElement("input")
+		check.type ="checkbox"
+		check.name = item[0]
+		check.value = item[0]
+		check.classList.add( "adv_song_check" )
+
+		var check_label = document.createElement("label")
+		check_label.appendChild( document.createTextNode( n ) )
+
+		check_cont.appendChild( check )
+		check_cont.appendChild( check_label )
+
+		adv_songs.appendChild(check_cont)
 	}
 
+	var cats = ["Easy", "Medium", "Hard", "Impossible", "Mainboard", "Remix", "RemixSeeded", "NoMod", "Coda"]
+
+	for( cat in cats ){
+		var check_cont = document.createElement("div")
+		//width: 100%;flex-basis: auto;
+
+		var check = document.createElement("input")
+		check.type ="checkbox"
+		check.name = cats[cat]
+		check.value = cats[cat]
+		check.classList.add( "adv_cat_check" )
+
+		var check_label = document.createElement("label")
+		check_label.appendChild( document.createTextNode( cats[cat] ) )
+
+		check_cont.appendChild( check )
+		check_cont.appendChild( check_label )
+
+		adv_cat.appendChild(check_cont)
+	}
 }
 
 

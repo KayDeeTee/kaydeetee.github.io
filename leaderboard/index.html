@@ -13,7 +13,7 @@
   </head>
   <body class="oxanium-bold" style="min-height:100vh;">   
 
-    <div class="flex-body">
+    <div id="mainflex" class="flex-body">
 
       <div class="dark sidebar">
         <div> Track </div>
@@ -48,6 +48,8 @@
         <input type="checkbox" class="sidebar-item" id="cheat_toggle" onclick="toggleCheaters()"> Show cheated scores </input>
 
         <div class="sidebar-item" id="score_count"></div>
+
+        <button id="advanced_search" class="sidebar-item hidden" type="button" onclick="showAdvanced()">Advanced Search</button>
 
       </div>
 
@@ -88,6 +90,21 @@
         </div>
       </div>
 
+    </div>
+
+    <div id="advanced_search_box" class="hidden">
+      <div id="advanced_search_box_inner">
+        
+        <div id="advanced_search_columns"> 
+          <div id="advanced_song_list" class="advanced_search_column">
+            <div id="advanced_song_list_inner"></div>
+          </div>
+          <div id="advanced_cat_list" class="advanced_search_column">
+            <div id="advanced_cat_list_inner"></div>
+          </div>
+        </div>
+        <button id="advanced_search" class="sidebar-item" type="button" onclick="doAdvancedSearch()">Search</button>
+      </div>
     </div>
 
     <div id="footer" class="footer">
