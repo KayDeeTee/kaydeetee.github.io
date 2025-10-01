@@ -225,19 +225,27 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 0
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 14
                 }
             ],
-            "average": 0.0043,
-            "base_score": 9990,
+            "average": -0.001,
+            "base_score": 19647,
             "cheated": false,
             "create_epoch": 1750826727321,
             "dnf": true,
             "fc": false,
-            "holds_hit": 0,
+            "holds_hit": 3,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
@@ -260,24 +268,37 @@
                 {
                     "InputRatingCountPairs": [
                         {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 3
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 14
+                        },
+                        {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 3
+                    "MultiplierValue": 4
                 }
             ],
-            "max_combo": 20,
+            "max_combo": 44,
             "pfc": false,
             "player_id": "866a9546-bc08-4bb3-b682-6da3531fa6e9",
             "player_name": "FullKaitoMode",
-            "score": 1666,
+            "score": 6541,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 20,
-            "update_epoch": 1750826750504,
+            "total_perfects": 44,
+            "update_epoch": 1758941049187,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
