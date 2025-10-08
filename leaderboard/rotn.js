@@ -973,8 +973,6 @@ function listCharts(){
 		item = items[i]
 		var n = item[1].name
 
-		if( n == "Daily") continue;
-
 		var opt = document.createElement("option")
 		opt.value = item[0]
 		var text = document.createTextNode(n);
