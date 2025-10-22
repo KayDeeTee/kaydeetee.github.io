@@ -533,38 +533,38 @@
                 },
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 10
+                    "perfects": 9
+                },
+                {
+                    "goods": 0,
+                    "greats": 1,
+                    "misses": 0,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 9
+                },
+                {
+                    "goods": 1,
+                    "greats": 10,
+                    "misses": 0,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 316
                 },
                 {
                     "goods": 0,
                     "greats": 0,
                     "misses": 0,
-                    "mult": 3,
-                    "oks": 0,
-                    "perfects": 10
-                },
-                {
-                    "goods": 0,
-                    "greats": 16,
-                    "misses": 0,
-                    "mult": 4,
-                    "oks": 1,
-                    "perfects": 310
-                },
-                {
-                    "goods": 0,
-                    "greats": 3,
-                    "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 60
+                    "perfects": 63
                 }
             ],
-            "average": -0.0019,
+            "average": 0.0064,
             "base_score": 139860,
             "cheated": true,
             "create_epoch": 1752789164820,
@@ -585,7 +585,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 2
@@ -594,7 +598,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 3
@@ -603,14 +611,14 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 310
+                            "NumberOfInputs": 316
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 16
+                            "NumberOfInputs": 10
                         },
                         {
-                            "InputRating": "Ok",
+                            "InputRating": "Good",
                             "NumberOfInputs": 1
                         }
                     ],
@@ -620,11 +628,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 60
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 3
+                            "NumberOfInputs": 63
                         }
                     ],
                     "MultiplierValue": 8
@@ -634,20 +638,20 @@
             "pfc": false,
             "player_id": "cae96257-d6b5-4950-bbf7-3c3703191dae",
             "player_name": "fishingDisaster",
-            "score": 1036326,
-            "total_goods": 0,
-            "total_greats": 19,
+            "score": 1046334,
+            "total_goods": 1,
+            "total_greats": 12,
             "total_misses": 0,
-            "total_oks": 1,
-            "total_perfects": 400,
-            "update_epoch": 1756395124583,
+            "total_oks": 0,
+            "total_perfects": 407,
+            "update_epoch": 1760891973021,
             "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 20.1228,
+            "vibe_duration": 20.1296,
             "vibe_times": [
-                106.9895,
-                184.92,
-                298.026
+                106.0362,
+                185.9735,
+                298.0512
             ],
             "vibes": 3
         },
