@@ -97,7 +97,13 @@ var all_charts = {
 	"DLCMango02":{ "name": "New Game"},
 	"DLCMango03":{ "name": "Crab Rave"},
 	"DLCMango04":{ "name": "PLAY"},
-	"DLCMango05":{ "name": "Waiting For You"}
+	"DLCMango05":{ "name": "Waiting For You"},
+	"DLCOrange01":{ "name": "Main Theme"},
+	"DLCOrange02":{ "name": "La Danse Macabre (Lich Yard)"},
+	"DLCOrange03":{ "name": "Strike the Earth! (Plains of Passage)"},
+	"DLCOrange04":{ "name": "In the Halls of the Usurper (Pridemoor Keep)"},
+	"DLCOrange05":{ "name": "High Above the Land (The Flying Machine)"},
+	"DLCOrange06":{ "name": "An Underlying Problem (The Lost City)"}
 }
 
 var custom_name_styles = {
