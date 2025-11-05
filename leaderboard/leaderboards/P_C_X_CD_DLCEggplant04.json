@@ -31,22 +31,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 87
+                    "perfects": 144
                 },
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 5
+                    "perfects": 35
                 }
             ],
-            "average": -0.0046,
-            "base_score": 49950,
+            "average": -0.0031,
+            "base_score": 73260,
             "cheated": false,
             "create_epoch": 1755188231595,
             "dnf": true,
@@ -84,7 +84,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 87
+                            "NumberOfInputs": 144
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -93,32 +97,28 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 5
-                        },
-                        {
-                            "InputRating": "Miss",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 35
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 122,
+            "max_combo": 209,
             "pfc": false,
             "player_id": "45e1cde8-7336-45d7-9bfc-0e72f0627bf4",
             "player_name": "Zyruvias",
-            "score": 24875,
+            "score": 50858,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 122,
-            "update_epoch": 1755352231982,
+            "total_perfects": 209,
+            "update_epoch": 1762003063210,
             "vibe_chains_hit": 1,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0.792,
+            "vibe_duration": 5.0632,
             "vibe_times": [
-                58.6658
+                58.7496
             ],
             "vibes": 1
         },
@@ -446,6 +446,107 @@
                 {
                     "goods": 0,
                     "greats": 0,
+                    "misses": 0,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 4
+                }
+            ],
+            "average": 0.009,
+            "base_score": 17982,
+            "cheated": false,
+            "create_epoch": 1762120551559,
+            "dnf": true,
+            "fc": false,
+            "holds_hit": 0,
+            "input_ratings": [
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 3
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 4
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 4
+                }
+            ],
+            "max_combo": 34,
+            "pfc": false,
+            "player_id": "d645403e-6340-4546-af5f-f180751e681c",
+            "player_name": "Squidoss",
+            "score": 4220,
+            "total_goods": 0,
+            "total_greats": 0,
+            "total_misses": 1,
+            "total_oks": 0,
+            "total_perfects": 34,
+            "update_epoch": 1762120599041,
+            "vibe_chains_hit": 0,
+            "vibe_chains_missed": 0,
+            "vibe_duration": 0,
+            "vibe_times": [],
+            "vibes": 0
+        },
+        {
+            "InputMults": [
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 1,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
                     "misses": 1,
                     "mult": 3,
                     "oks": 0,
@@ -737,56 +838,6 @@
             "total_oks": 0,
             "total_perfects": 6,
             "update_epoch": 1758485419838,
-            "vibe_chains_hit": 0,
-            "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
-        },
-        {
-            "InputMults": [
-                {
-                    "goods": 0,
-                    "greats": 0,
-                    "misses": 1,
-                    "mult": 1,
-                    "oks": 0,
-                    "perfects": 3
-                }
-            ],
-            "average": 0.0186,
-            "base_score": 7659,
-            "cheated": false,
-            "create_epoch": 1755722474281,
-            "dnf": true,
-            "fc": false,
-            "holds_hit": 0,
-            "input_ratings": [
-                {
-                    "InputRatingCountPairs": [
-                        {
-                            "InputRating": "Perfect",
-                            "NumberOfInputs": 3
-                        },
-                        {
-                            "InputRating": "Miss",
-                            "NumberOfInputs": 1
-                        }
-                    ],
-                    "MultiplierValue": 1
-                }
-            ],
-            "max_combo": 3,
-            "pfc": false,
-            "player_id": "0e3fb062-f0f1-4184-bffb-fe6b09b3dad7",
-            "player_name": "Firetail",
-            "score": 166,
-            "total_goods": 0,
-            "total_greats": 0,
-            "total_misses": 1,
-            "total_oks": 0,
-            "total_perfects": 3,
-            "update_epoch": 1755722474281,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,

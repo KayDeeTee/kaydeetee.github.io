@@ -152,10 +152,10 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 86
+                    "perfects": 76
                 },
                 {
                     "goods": 0,
@@ -163,11 +163,11 @@
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 18
+                    "perfects": 24
                 }
             ],
-            "average": -0.0075,
-            "base_score": 46953,
+            "average": -0.003,
+            "base_score": 46620,
             "cheated": false,
             "create_epoch": 1761598605661,
             "dnf": true,
@@ -205,7 +205,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 86
+                            "NumberOfInputs": 76
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -214,32 +218,31 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 18
+                            "NumberOfInputs": 24
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 134,
-            "pfc": true,
+            "max_combo": 130,
+            "pfc": false,
             "player_id": "e8ef8e0a-9976-4fc3-9b8f-3a9a0508cee9",
             "player_name": "Frene",
-            "score": 31325,
+            "score": 31770,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 134,
-            "update_epoch": 1761605035076,
-            "vibe_chains_hit": 3,
-            "vibe_chains_missed": 0,
-            "vibe_duration": 10.2012,
+            "total_perfects": 130,
+            "update_epoch": 1762113712996,
+            "vibe_chains_hit": 2,
+            "vibe_chains_missed": 1,
+            "vibe_duration": 10.1338,
             "vibe_times": [
-                66.9486,
-                108.9362,
-                164.9555
+                67.0149,
+                127.9777
             ],
-            "vibes": 3
+            "vibes": 2
         },
         {
             "InputMults": [
