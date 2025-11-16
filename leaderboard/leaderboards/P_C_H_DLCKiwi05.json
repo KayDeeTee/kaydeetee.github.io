@@ -6,27 +6,27 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 1,
+                    "oks": 0,
+                    "perfects": 9
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 2,
                     "oks": 0,
                     "perfects": 10
                 },
                 {
                     "goods": 0,
-                    "greats": 2,
-                    "misses": 0,
-                    "mult": 2,
-                    "oks": 0,
-                    "perfects": 8
-                },
-                {
-                    "goods": 0,
-                    "greats": 1,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
                 },
                 {
                     "goods": 0,
@@ -45,7 +45,7 @@
                     "perfects": 128
                 }
             ],
-            "average": 0.0001,
+            "average": -0.0038,
             "base_score": 273393,
             "cheated": false,
             "create_epoch": 1749752044800,
@@ -57,7 +57,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 1
@@ -66,11 +70,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 8
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 2
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 2
@@ -79,11 +79,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 3
@@ -115,21 +111,21 @@
             "pfc": false,
             "player_id": "d9dea6e5-89c1-447f-96de-39fc274039a9",
             "player_name": "pastryism",
-            "score": 2084822,
+            "score": 2086082,
             "total_goods": 0,
-            "total_greats": 9,
+            "total_greats": 7,
             "total_misses": 0,
             "total_oks": 0,
-            "total_perfects": 812,
-            "update_epoch": 1763156298025,
+            "total_perfects": 814,
+            "update_epoch": 1763254997713,
             "vibe_chains_hit": 6,
             "vibe_chains_missed": 0,
-            "vibe_duration": 30.1619,
+            "vibe_duration": 30.1385,
             "vibe_times": [
-                115.2392,
-                213.0102,
-                339.2679,
-                496.9595
+                115.1825,
+                211.9919,
+                339.2086,
+                496.9373
             ],
             "vibes": 4
         },
