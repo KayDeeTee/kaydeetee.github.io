@@ -31,10 +31,10 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 121
+                    "perfects": 225
                 },
                 {
                     "goods": 0,
@@ -42,16 +42,16 @@
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 33
+                    "perfects": 91
                 }
             ],
-            "average": 0.0027,
-            "base_score": 65601,
+            "average": 0.0013,
+            "base_score": 122877,
             "cheated": false,
             "create_epoch": 1751853368313,
             "dnf": true,
             "fc": false,
-            "holds_hit": 4,
+            "holds_hit": 16,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
@@ -84,7 +84,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 121
+                            "NumberOfInputs": 225
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -93,30 +97,32 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 33
+                            "NumberOfInputs": 91
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 184,
-            "pfc": true,
+            "max_combo": 346,
+            "pfc": false,
             "player_id": "1a96865b-53ff-4e82-b54a-275a79093e1d",
             "player_name": "imhinder",
-            "score": 44996,
+            "score": 94251,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 184,
-            "update_epoch": 1763651785633,
-            "vibe_chains_hit": 1,
+            "total_perfects": 346,
+            "update_epoch": 1764593454181,
+            "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 5.0987,
+            "vibe_duration": 15.2068,
             "vibe_times": [
-                53.5886
+                53.629,
+                93.6036,
+                116.5976
             ],
-            "vibes": 1
+            "vibes": 3
         },
         {
             "InputMults": [
@@ -515,6 +521,73 @@
                     "misses": 1,
                     "mult": 2,
                     "oks": 0,
+                    "perfects": 6
+                }
+            ],
+            "average": -0.0076,
+            "base_score": 14652,
+            "cheated": false,
+            "create_epoch": 1748972373121,
+            "dnf": true,
+            "fc": false,
+            "holds_hit": 0,
+            "input_ratings": [
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 6
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 2
+                }
+            ],
+            "max_combo": 16,
+            "pfc": false,
+            "player_id": "cacefdb7-ca72-4b9f-84c9-83b278d05b03",
+            "player_name": "Syvacra",
+            "score": 1222,
+            "total_goods": 0,
+            "total_greats": 0,
+            "total_misses": 1,
+            "total_oks": 0,
+            "total_perfects": 16,
+            "update_epoch": 1764697449809,
+            "vibe_chains_hit": 0,
+            "vibe_chains_missed": 0,
+            "vibe_duration": 0,
+            "vibe_times": [],
+            "vibes": 0
+        },
+        {
+            "InputMults": [
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 1,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
                     "perfects": 5
                 }
             ],
@@ -744,56 +817,6 @@
             "total_oks": 0,
             "total_perfects": 7,
             "update_epoch": 1759264128082,
-            "vibe_chains_hit": 0,
-            "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
-        },
-        {
-            "InputMults": [
-                {
-                    "goods": 0,
-                    "greats": 0,
-                    "misses": 1,
-                    "mult": 1,
-                    "oks": 0,
-                    "perfects": 6
-                }
-            ],
-            "average": -0.004,
-            "base_score": 10323,
-            "cheated": false,
-            "create_epoch": 1762745742906,
-            "dnf": true,
-            "fc": false,
-            "holds_hit": 0,
-            "input_ratings": [
-                {
-                    "InputRatingCountPairs": [
-                        {
-                            "InputRating": "Perfect",
-                            "NumberOfInputs": 6
-                        },
-                        {
-                            "InputRating": "Miss",
-                            "NumberOfInputs": 1
-                        }
-                    ],
-                    "MultiplierValue": 1
-                }
-            ],
-            "max_combo": 6,
-            "pfc": false,
-            "player_id": "eb36cf00-2699-47be-94d8-f2124f4df5a8",
-            "player_name": "Mono!",
-            "score": 333,
-            "total_goods": 0,
-            "total_greats": 0,
-            "total_misses": 1,
-            "total_oks": 0,
-            "total_perfects": 6,
-            "update_epoch": 1762745757647,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
