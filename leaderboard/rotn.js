@@ -103,7 +103,14 @@ var all_charts = {
 	"DLCOrange03":{ "name": "Strike the Earth! (Plains of Passage)"},
 	"DLCOrange04":{ "name": "In the Halls of the Usurper (Pridemoor Keep)"},
 	"DLCOrange05":{ "name": "High Above the Land (The Flying Machine)"},
-	"DLCOrange06":{ "name": "An Underlying Problem (The Lost City)"}
+	"DLCOrange06":{ "name": "An Underlying Problem (The Lost City)"},
+	"DLCFig01":{ "name": "Worn Out Tapes [Tally-Ho Version]"},
+	"DLCStrawberry01":{ "name": "Dad Battle"},
+	"DLCStrawberry02":{ "name": "Blammed"},
+	"DLCStrawberry03":{ "name": "Stress"},
+	"DLCStrawberry04":{ "name": "Darnell"},
+	"DLCStrawberry05":{ "name": "Ugh"},
+	"DLCStrawberry06":{ "name": "Senpai"},
 }
 
 var custom_name_styles = {
