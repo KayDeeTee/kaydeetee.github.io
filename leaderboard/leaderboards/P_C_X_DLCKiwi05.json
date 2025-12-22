@@ -7771,46 +7771,46 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 1,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 1,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 1,
+                    "misses": 0,
+                    "mult": 2,
                     "oks": 0,
                     "perfects": 9
                 },
                 {
                     "goods": 0,
-                    "greats": 3,
-                    "misses": 0,
-                    "mult": 2,
-                    "oks": 0,
-                    "perfects": 7
-                },
-                {
-                    "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 10
-                },
-                {
-                    "goods": 3,
-                    "greats": 110,
-                    "misses": 0,
-                    "mult": 4,
-                    "oks": 1,
-                    "perfects": 846
+                    "perfects": 9
                 },
                 {
                     "goods": 1,
-                    "greats": 26,
+                    "greats": 99,
+                    "misses": 0,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 873
+                },
+                {
+                    "goods": 1,
+                    "greats": 11,
                     "misses": 0,
                     "mult": 8,
-                    "oks": 1,
+                    "oks": 3,
                     "perfects": 83
                 }
             ],
-            "average": -0.0022,
+            "average": 0.0027,
             "base_score": 366633,
             "cheated": false,
             "create_epoch": 1755049366330,
@@ -7822,11 +7822,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 1
@@ -7835,11 +7831,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 7
+                            "NumberOfInputs": 9
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 3
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 2
@@ -7848,7 +7844,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 3
@@ -7857,18 +7857,14 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 846
+                            "NumberOfInputs": 873
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 110
+                            "NumberOfInputs": 99
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 3
-                        },
-                        {
-                            "InputRating": "Ok",
                             "NumberOfInputs": 1
                         }
                     ],
@@ -7882,7 +7878,7 @@
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 26
+                            "NumberOfInputs": 11
                         },
                         {
                             "InputRating": "Good",
@@ -7890,7 +7886,7 @@
                         },
                         {
                             "InputRating": "Ok",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 3
                         }
                     ],
                     "MultiplierValue": 8
@@ -7900,22 +7896,23 @@
             "pfc": false,
             "player_id": "cfb57219-ccdf-49b9-92d5-a37dae1918c7",
             "player_name": "Eizyr",
-            "score": 2520051,
-            "total_goods": 4,
-            "total_greats": 140,
+            "score": 2525428,
+            "total_goods": 2,
+            "total_greats": 112,
             "total_misses": 0,
-            "total_oks": 2,
-            "total_perfects": 955,
-            "update_epoch": 1763427735696,
+            "total_oks": 3,
+            "total_perfects": 984,
+            "update_epoch": 1766287279725,
             "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 20.0608,
+            "vibe_duration": 20.0872,
             "vibe_times": [
-                158.4992,
-                194.2145,
-                520.3889
+                115.1758,
+                229.0105,
+                315.3665,
+                423.9904
             ],
-            "vibes": 3
+            "vibes": 4
         },
         {
             "InputMults": [
