@@ -852,16 +852,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 4
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 1
                 }
             ],
-            "average": -0.0155,
-            "base_score": 2997,
+            "average": -0.0093,
+            "base_score": 5661,
             "cheated": false,
-            "create_epoch": 1741561394234,
+            "create_epoch": 1767318792894,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -870,27 +878,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 4
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 1
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 4,
+            "max_combo": 11,
             "pfc": false,
-            "player_id": "59e04b3e-aac1-468c-afc4-f962a67c6e11",
-            "player_name": "beowulfhootman",
-            "score": 222,
+            "player_id": "326846ee-67aa-4843-9321-0b199d290cca",
+            "player_name": "Blaze523",
+            "score": 666,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 4,
-            "update_epoch": 1741561419982,
+            "total_perfects": 11,
+            "update_epoch": 1767318857121,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
