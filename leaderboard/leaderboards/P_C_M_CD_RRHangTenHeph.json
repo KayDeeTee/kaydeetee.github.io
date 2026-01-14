@@ -997,16 +997,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 16
+                    "perfects": 33
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 0
                 }
             ],
-            "average": 0.0062,
-            "base_score": 18981,
+            "average": -0.0052,
+            "base_score": 24642,
             "cheated": false,
-            "create_epoch": 1741540236141,
+            "create_epoch": 1767948622810,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -1042,32 +1050,39 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 16
-                        },
+                            "NumberOfInputs": 33
+                        }
+                    ],
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 4
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 46,
+            "max_combo": 63,
             "pfc": false,
-            "player_id": "da163152-a60d-4118-96f8-68ca7b20e81b",
-            "player_name": "TheTomSom",
-            "score": 6885,
+            "player_id": "3eea3365-d2f4-4a34-a4a8-376bf8d16a79",
+            "player_name": "\u30b2\u30fc\u30e0\u306d\u3053",
+            "score": 10662,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 46,
-            "update_epoch": 1741540236141,
-            "vibe_chains_hit": 0,
-            "vibe_chains_missed": 1,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "total_perfects": 63,
+            "update_epoch": 1767948661821,
+            "vibe_chains_hit": 1,
+            "vibe_chains_missed": 0,
+            "vibe_duration": 0.0161,
+            "vibe_times": [
+                82.4046
+            ],
+            "vibes": 1
         }
     ],
     "vibe_chains": -1

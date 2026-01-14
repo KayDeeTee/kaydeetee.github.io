@@ -953,16 +953,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 4
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 0
                 }
             ],
-            "average": 0.0237,
-            "base_score": 5328,
+            "average": 0.01,
+            "base_score": 7326,
             "cheated": false,
-            "create_epoch": 1750557519483,
+            "create_epoch": 1768197196675,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -971,27 +979,32 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 4
-                        },
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 4,
+            "max_combo": 10,
             "pfc": false,
-            "player_id": "148ea175-a326-4cbe-9ec4-48814ed8eb00",
-            "player_name": "Eevee_333",
-            "score": 222,
+            "player_id": "3eea3365-d2f4-4a34-a4a8-376bf8d16a79",
+            "player_name": "\u30b2\u30fc\u30e0\u306d\u3053",
+            "score": 556,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 4,
-            "update_epoch": 1750557519483,
+            "total_perfects": 10,
+            "update_epoch": 1768197196675,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
