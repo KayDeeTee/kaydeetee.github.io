@@ -791,47 +791,47 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 1,
+                    "oks": 0,
+                    "perfects": 29
+                },
+                {
+                    "goods": 0,
+                    "greats": 2,
+                    "misses": 0,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 24
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 3,
                     "oks": 0,
                     "perfects": 20
                 },
                 {
-                    "goods": 0,
-                    "greats": 1,
-                    "misses": 0,
-                    "mult": 2,
-                    "oks": 0,
-                    "perfects": 19
-                },
-                {
-                    "goods": 0,
-                    "greats": 1,
-                    "misses": 0,
-                    "mult": 3,
-                    "oks": 0,
-                    "perfects": 19
-                },
-                {
-                    "goods": 1,
-                    "greats": 45,
+                    "goods": 4,
+                    "greats": 48,
                     "misses": 0,
                     "mult": 4,
-                    "oks": 1,
-                    "perfects": 806
+                    "oks": 0,
+                    "perfects": 794
                 },
                 {
                     "goods": 0,
-                    "greats": 9,
+                    "greats": 7,
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 101
+                    "perfects": 106
                 }
             ],
-            "average": -0.0023,
-            "base_score": 340992,
+            "average": -0.001,
+            "base_score": 344655,
             "cheated": false,
             "create_epoch": 1762643888852,
             "dnf": false,
@@ -842,7 +842,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 20
+                            "NumberOfInputs": 29
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 1
@@ -851,11 +855,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 19
+                            "NumberOfInputs": 24
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 2
                         }
                     ],
                     "MultiplierValue": 2
@@ -864,11 +868,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 19
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 20
                         }
                     ],
                     "MultiplierValue": 3
@@ -877,19 +877,15 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 806
+                            "NumberOfInputs": 794
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 45
+                            "NumberOfInputs": 48
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 1
-                        },
-                        {
-                            "InputRating": "Ok",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 4
                         }
                     ],
                     "MultiplierValue": 4
@@ -898,35 +894,35 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 101
+                            "NumberOfInputs": 106
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 9
+                            "NumberOfInputs": 7
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 882,
+            "max_combo": 866,
             "pfc": false,
             "player_id": "42d8c547-929e-4a5b-ba4b-36cfbef2e8e3",
             "player_name": "neck logo",
-            "score": 2419037,
-            "total_goods": 1,
-            "total_greats": 56,
+            "score": 2427688,
+            "total_goods": 4,
+            "total_greats": 58,
             "total_misses": 0,
-            "total_oks": 1,
-            "total_perfects": 965,
-            "update_epoch": 1764731218152,
+            "total_oks": 0,
+            "total_perfects": 973,
+            "update_epoch": 1770505317069,
             "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 20.1044,
+            "vibe_duration": 20.1112,
             "vibe_times": [
-                102.7198,
-                179.5052,
-                282.6005,
-                405.2
+                102.9911,
+                179.089,
+                282.9429,
+                405.4427
             ],
             "vibes": 4
         },
