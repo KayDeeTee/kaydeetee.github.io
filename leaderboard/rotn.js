@@ -111,6 +111,8 @@ var all_charts = {
 	"DLCStrawberry04":{ "name": "Darnell"},
 	"DLCStrawberry05":{ "name": "Ugh"},
 	"DLCStrawberry06":{ "name": "Senpai"},
+	"DLCOG04":{ "name": "Portabellohead"},
+ 	"DLCOG09":{ "name": "March of the Profane"},
 }
 
 var custom_name_styles = {
