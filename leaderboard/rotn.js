@@ -610,6 +610,7 @@ function generate_leaderboards( json_objects ) {
 			score.max_possible_vibes = -1
 			if( lb.hasOwnProperty("max_hits") ){
 				score.max_possible_hits = Number(lb.max_hits)
+				if( lb.name == "P_C_X_RRMatriarch" ){ score.max_possible_hits = -1 }
 			}
 			if( lb.hasOwnProperty("vibe_chains") ){
 				score.max_possible_vibes = Number(lb.vibe_chains)
@@ -1081,6 +1082,7 @@ function get_player_scores( json_objects, pid ){
 				score.max_possible_vibes = -1
 				if( json.hasOwnProperty("max_hits") ){
 					score.max_possible_hits = Number(json.max_hits)
+					if( json.name == "P_C_X_RRMatriarch" ){ score.max_possible_hits = -1 }
 				}
 				if( json.hasOwnProperty("vibe_chains") ){
 					score.max_possible_vibes = Number(json.vibe_chains)
