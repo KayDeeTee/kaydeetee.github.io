@@ -113,6 +113,12 @@ var all_charts = {
 	"DLCStrawberry06":{ "name": "Senpai"},
 	"DLCOG04":{ "name": "Portabellohead"},
  	"DLCOG09":{ "name": "March of the Profane"},
+ 	"DLCDurian01":{ "name": "Digital Drive"},
+ 	"DLCDurian02":{ "name": "Every Day is Night"},
+ 	"DLCDurian03":{ "name": "Drive Me Wild"},
+ 	"DLCDurian04":{ "name": "YLIAD"},
+ 	"DLCDurian05":{ "name": "Welcome to VA-11 HALL-A"},
+ 	"DLCPineapple01":{ "name": "The Magician"},
 }
 
 var custom_name_styles = {
