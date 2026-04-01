@@ -1047,13 +1047,29 @@
                     "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 16
                 }
             ],
-            "average": -0.014,
-            "base_score": 10656,
+            "average": 0.0065,
+            "base_score": 20979,
             "cheated": false,
-            "create_epoch": 1765423052963,
+            "create_epoch": 1774918368488,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -1071,25 +1087,47 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 3
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 16
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 4
                 }
             ],
-            "max_combo": 19,
-            "pfc": true,
-            "player_id": "d645403e-6340-4546-af5f-f180751e681c",
-            "player_name": "Squidoss",
-            "score": 1555,
+            "max_combo": 46,
+            "pfc": false,
+            "player_id": "1beb5231-a624-4fa6-aeb8-8936bf0017dd",
+            "player_name": "\u0425\u0435\u0439\u043c\u0434\u0430\u043b\u043b\u044c",
+            "score": 6887,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 19,
-            "update_epoch": 1772785174059,
+            "total_perfects": 46,
+            "update_epoch": 1774918389892,
             "vibe_chains_hit": 0,
-            "vibe_chains_missed": 0,
+            "vibe_chains_missed": 1,
             "vibe_duration": 0,
             "vibe_times": [],
             "vibes": 0
