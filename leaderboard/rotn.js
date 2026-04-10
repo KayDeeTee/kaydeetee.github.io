@@ -133,6 +133,8 @@ var custom_name_styles = {
 	"080dcc9e-ced2-4e00-b306-d615f60a3425": "rondo-winner", //Kerem
 	"475971a0-96ec-4686-b2c0-3884119c00a3": "rondo-winner", //Sam
 	"ed59f0a3-002f-4c6e-96fa-184d2ad18a95": "rondo-winner", //Patachu
+	"d645403e-6340-4546-af5f-f180751e681c": "rondo-winner", //Squidoss
+	"e8ef8e0a-9976-4fc3-9b8f-3a9a0508cee9": "rondo-winner", //Frene
 }
 
 var cheat_false_flags = { 
