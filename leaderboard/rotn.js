@@ -119,6 +119,12 @@ var all_charts = {
  	"DLCDurian04":{ "name": "YLIAD"},
  	"DLCDurian05":{ "name": "Welcome to VA-11 HALL-A"},
  	"DLCPineapple01":{ "name": "The Magician"},
+	"DLCVanilla01":{ "name": "Spider Dance"},
+	"DLCVanilla02":{ "name": "Hopes and Dreams"},
+	"DLCVanilla03":{ "name": "Death by Glamour"},
+	"DLCVanilla04":{ "name": "Bergentrückung / Asgore"},
+	"DLCVanilla05":{ "name": "Battle Against a True Hero"},
+	"DLCVanilla06":{ "name": "Megalovania"},
 }
 
 var custom_name_styles = {
@@ -126,6 +132,7 @@ var custom_name_styles = {
 	"21797726-7189-487d-8d38-54b5d5cf0504": "rondo-winner", //Bun
 	"080dcc9e-ced2-4e00-b306-d615f60a3425": "rondo-winner", //Kerem
 	"475971a0-96ec-4686-b2c0-3884119c00a3": "rondo-winner", //Sam
+	"ed59f0a3-002f-4c6e-96fa-184d2ad18a95": "rondo-winner", //Patachu
 }
 
 var cheat_false_flags = { 
