@@ -374,19 +374,43 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 7
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 8
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 4
                 }
             ],
-            "average": 0.0098,
-            "base_score": 8658,
+            "average": -0.0089,
+            "base_score": 15984,
             "cheated": false,
             "create_epoch": 1773520620017,
             "dnf": true,
             "fc": false,
-            "holds_hit": 0,
+            "holds_hit": 11,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
@@ -401,32 +425,61 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 7
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 3
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 8
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 2
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 4
+                        }
+                    ],
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 17,
+            "max_combo": 42,
             "pfc": false,
             "player_id": "db03cbbd-63ad-4d44-8aa4-95452acf7f01",
             "player_name": "Wairetud",
-            "score": 1333,
+            "score": 7251,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 17,
-            "update_epoch": 1773732056209,
-            "vibe_chains_hit": 0,
+            "total_perfects": 42,
+            "update_epoch": 1775659938182,
+            "vibe_chains_hit": 1,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_duration": 5.0527,
+            "vibe_times": [
+                67.7025
+            ],
+            "vibes": 1
         }
     ],
     "vibe_chains": -1
