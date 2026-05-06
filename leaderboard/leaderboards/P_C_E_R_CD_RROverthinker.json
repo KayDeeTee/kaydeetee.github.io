@@ -900,13 +900,21 @@
                     "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 1
                 }
             ],
-            "average": -0.0092,
-            "base_score": 3663,
+            "average": 0.0117,
+            "base_score": 5328,
             "cheated": false,
-            "create_epoch": 1740101919607,
+            "create_epoch": 1777551516946,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -915,23 +923,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 1
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 9,
-            "pfc": true,
-            "player_id": "3b126364-4050-4736-be08-99e749827e5f",
-            "player_name": "Glitchy",
-            "score": 500,
+            "max_combo": 11,
+            "pfc": false,
+            "player_id": "d377e101-b5a8-4d9c-b52b-3f7e158d7e95",
+            "player_name": "Tiotiomars",
+            "score": 666,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 9,
-            "update_epoch": 1740101919607,
+            "total_perfects": 11,
+            "update_epoch": 1777551516946,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
