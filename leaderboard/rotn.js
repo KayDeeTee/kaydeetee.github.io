@@ -125,11 +125,11 @@ var all_charts = {
 	"DLCVanilla04":{ "name": "Bergentrückung / Asgore"},
 	"DLCVanilla05":{ "name": "Battle Against a True Hero"},
 	"DLCVanilla06":{ "name": "Megalovania"},
-	"DLCRaspberry01":{ "name": "Ultra Creepy"},
-	"DLCRaspberry02":{ "name": "A Banj After Midnight"},
-	"DLCRaspberry03":{ "name": "Goo"},
+	"DLCRaspberry01":{ "name": "A Banj After Midnight"},
+	"DLCRaspberry02":{ "name": "Goo"},
+	"DLCRaspberry03":{ "name": "Phantom Funk"},
 	"DLCRaspberry04":{ "name": "The Showdown Throwdown"},
-	"DLCRaspberry05":{ "name": "Phantom Funk"},
+	"DLCRaspberry05":{ "name": "Ultra Creepy"},
 	"DLCRaspberry06":{ "name": "Inside"},
 }
 
