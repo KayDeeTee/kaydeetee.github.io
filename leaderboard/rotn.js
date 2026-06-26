@@ -131,6 +131,10 @@ var all_charts = {
 	"DLCRaspberry04":{ "name": "The Showdown Throwdown"},
 	"DLCRaspberry05":{ "name": "Ultra Creepy"},
 	"DLCRaspberry06":{ "name": "Inside"},
+	"DLCIcaco01":{ "name": "POP-STARS"},
+	"DLCIcaco02":{ "name": "More"},
+	"DLCIcaco03":{ "name": "Villain"},
+	"DLCIcaco04":{ "name": "The Baddest"},
 }
 
 var custom_name_styles = {
