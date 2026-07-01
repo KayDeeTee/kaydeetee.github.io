@@ -751,21 +751,21 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 74
+                    "perfects": 73
                 },
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 12
+                    "perfects": 13
                 }
             ],
-            "average": 0.0003,
+            "average": 0,
             "base_score": 40626,
             "cheated": false,
             "create_epoch": 1764519250812,
@@ -804,7 +804,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 74
+                            "NumberOfInputs": 73
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -813,11 +817,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 12
-                        },
-                        {
-                            "InputRating": "Miss",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 13
                         }
                     ],
                     "MultiplierValue": 8
@@ -827,21 +827,20 @@
             "pfc": false,
             "player_id": "886f901e-85e6-4bdc-a8c3-6643a0a8c362",
             "player_name": "Xenedriel",
-            "score": 25097,
+            "score": 25321,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
             "total_perfects": 116,
-            "update_epoch": 1764519250812,
+            "update_epoch": 1782363924449,
             "vibe_chains_hit": 2,
             "vibe_chains_missed": 0,
-            "vibe_duration": 8.7819,
+            "vibe_duration": 5.1841,
             "vibe_times": [
-                77.8886,
-                162.0711
+                93.0086
             ],
-            "vibes": 2
+            "vibes": 1
         },
         {
             "InputMults": [
