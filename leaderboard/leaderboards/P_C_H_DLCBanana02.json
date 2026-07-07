@@ -13843,9 +13843,17 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 2,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 1,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 2,
+                    "misses": 0,
+                    "mult": 2,
                     "oks": 0,
                     "perfects": 8
                 },
@@ -13853,43 +13861,44 @@
                     "goods": 0,
                     "greats": 1,
                     "misses": 0,
-                    "mult": 2,
+                    "mult": 3,
                     "oks": 0,
                     "perfects": 9
                 },
                 {
-                    "goods": 0,
-                    "greats": 2,
-                    "misses": 0,
-                    "mult": 3,
-                    "oks": 0,
-                    "perfects": 8
-                },
-                {
-                    "goods": 4,
-                    "greats": 92,
+                    "goods": 3,
+                    "greats": 114,
                     "misses": 0,
                     "mult": 4,
                     "oks": 1,
-                    "perfects": 717
+                    "perfects": 706
                 },
                 {
-                    "goods": 4,
-                    "greats": 26,
+                    "goods": 0,
+                    "greats": 9,
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 120
+                    "perfects": 131
                 }
             ],
-            "average": -0.0065,
+            "average": 0.0076,
             "base_score": 331002,
             "cheated": false,
-            "create_epoch": 1759613557598,
+            "create_epoch": 1754615568925,
             "dnf": false,
             "fc": true,
             "holds_hit": 201,
             "input_ratings": [
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
                 {
                     "InputRatingCountPairs": [
                         {
@@ -13901,7 +13910,7 @@
                             "NumberOfInputs": 2
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 },
                 {
                     "InputRatingCountPairs": [
@@ -13914,34 +13923,21 @@
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 2
-                },
-                {
-                    "InputRatingCountPairs": [
-                        {
-                            "InputRating": "Perfect",
-                            "NumberOfInputs": 8
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 2
-                        }
-                    ],
                     "MultiplierValue": 3
                 },
                 {
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 717
+                            "NumberOfInputs": 706
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 92
+                            "NumberOfInputs": 114
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 4
+                            "NumberOfInputs": 3
                         },
                         {
                             "InputRating": "Ok",
@@ -13954,15 +13950,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 120
+                            "NumberOfInputs": 131
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 26
-                        },
-                        {
-                            "InputRating": "Good",
-                            "NumberOfInputs": 4
+                            "NumberOfInputs": 9
                         }
                     ],
                     "MultiplierValue": 8
@@ -13970,25 +13962,25 @@
             ],
             "max_combo": 994,
             "pfc": false,
-            "player_id": "25174a4a-45ee-4294-a3f2-6d62875a3e3a",
-            "player_name": "Chizzy(-&-)",
-            "score": 2426164,
-            "total_goods": 8,
-            "total_greats": 123,
+            "player_id": "f0faaee0-5f6c-4f74-8e5c-41e8373ed2ba",
+            "player_name": "Seu Pai",
+            "score": 2427253,
+            "total_goods": 3,
+            "total_greats": 126,
             "total_misses": 0,
             "total_oks": 1,
-            "total_perfects": 862,
-            "update_epoch": 1777057634659,
+            "total_perfects": 864,
+            "update_epoch": 1783376790824,
             "vibe_chains_hit": 6,
             "vibe_chains_missed": 0,
-            "vibe_duration": 30.2144,
+            "vibe_duration": 30.1885,
             "vibe_times": [
-                79.9136,
-                239.6318,
-                372.2962,
-                420.7212,
-                611.3108,
-                728.0718
+                71.2014,
+                237.2017,
+                330.1805,
+                418.6899,
+                598.0503,
+                700.6281
             ],
             "vibes": 6
         }
