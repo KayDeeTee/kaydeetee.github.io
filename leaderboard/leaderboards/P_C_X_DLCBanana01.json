@@ -5998,11 +5998,11 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 10
+                    "perfects": 9
                 },
                 {
                     "goods": 0,
@@ -6021,23 +6021,23 @@
                     "perfects": 10
                 },
                 {
-                    "goods": 2,
+                    "goods": 3,
                     "greats": 76,
                     "misses": 0,
                     "mult": 4,
-                    "oks": 3,
-                    "perfects": 473
+                    "oks": 2,
+                    "perfects": 469
                 },
                 {
-                    "goods": 5,
-                    "greats": 29,
+                    "goods": 4,
+                    "greats": 34,
                     "misses": 0,
                     "mult": 8,
-                    "oks": 1,
-                    "perfects": 107
+                    "oks": 0,
+                    "perfects": 108
                 }
             ],
-            "average": 0.0004,
+            "average": -0.0006,
             "base_score": 241758,
             "cheated": false,
             "create_epoch": 1753986968713,
@@ -6049,7 +6049,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 1
@@ -6076,7 +6080,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 473
+                            "NumberOfInputs": 469
                         },
                         {
                             "InputRating": "Great",
@@ -6084,11 +6088,11 @@
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 2
+                            "NumberOfInputs": 3
                         },
                         {
                             "InputRating": "Ok",
-                            "NumberOfInputs": 3
+                            "NumberOfInputs": 2
                         }
                     ],
                     "MultiplierValue": 4
@@ -6097,19 +6101,15 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 107
+                            "NumberOfInputs": 108
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 29
+                            "NumberOfInputs": 34
                         },
                         {
                             "InputRating": "Good",
-                            "NumberOfInputs": 5
-                        },
-                        {
-                            "InputRating": "Ok",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 4
                         }
                     ],
                     "MultiplierValue": 8
@@ -6119,22 +6119,22 @@
             "pfc": false,
             "player_id": "b57c66d6-3585-44f1-b2cb-c353193f67f6",
             "player_name": "AeronStatic",
-            "score": 1806885,
+            "score": 1813357,
             "total_goods": 7,
-            "total_greats": 105,
+            "total_greats": 111,
             "total_misses": 0,
-            "total_oks": 4,
-            "total_perfects": 610,
-            "update_epoch": 1770572057503,
+            "total_oks": 2,
+            "total_perfects": 606,
+            "update_epoch": 1783795578325,
             "vibe_chains_hit": 5,
             "vibe_chains_missed": 0,
-            "vibe_duration": 25.1563,
+            "vibe_duration": 25.1616,
             "vibe_times": [
-                96.6484,
-                181.9554,
-                270.8467,
-                299.031,
-                349.0878
+                96.4736,
+                182.048,
+                229.15,
+                290.0282,
+                348.9333
             ],
             "vibes": 5
         },
@@ -9083,7 +9083,7 @@
             "max_combo": 517,
             "pfc": false,
             "player_id": "2cafd469-175b-4b8d-8071-8a4b72481a62",
-            "player_name": "Adachi",
+            "player_name": "Caffeine",
             "score": 1734146,
             "total_goods": 8,
             "total_greats": 143,
