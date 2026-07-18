@@ -153,19 +153,19 @@
                     "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 285
+                    "perfects": 308
                 },
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 51
+                    "perfects": 64
                 }
             ],
-            "average": 0.0013,
-            "base_score": 126540,
+            "average": 0.0001,
+            "base_score": 137196,
             "cheated": false,
             "create_epoch": 1783051219743,
             "dnf": true,
@@ -203,7 +203,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 285
+                            "NumberOfInputs": 308
                         }
                     ],
                     "MultiplierValue": 4
@@ -212,31 +212,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 51
+                            "NumberOfInputs": 64
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 366,
-            "pfc": true,
+            "max_combo": 402,
+            "pfc": false,
             "player_id": "79f9473d-3df4-487f-af51-d3c7dc507e8f",
             "player_name": "Edan456",
-            "score": 91680,
+            "score": 102560,
             "total_goods": 0,
             "total_greats": 0,
-            "total_misses": 0,
+            "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 366,
-            "update_epoch": 1783054827503,
-            "vibe_chains_hit": 2,
+            "total_perfects": 402,
+            "update_epoch": 1783769144130,
+            "vibe_chains_hit": 3,
             "vibe_chains_missed": 0,
-            "vibe_duration": 10.0696,
+            "vibe_duration": 13.5287,
             "vibe_times": [
-                128.4535,
-                181.0371
+                128.5648,
+                181.0549,
+                295.5902
             ],
-            "vibes": 2
+            "vibes": 3
         },
         {
             "InputMults": [
@@ -602,6 +607,90 @@
             "total_oks": 0,
             "total_perfects": 25,
             "update_epoch": 1781225695786,
+            "vibe_chains_hit": 0,
+            "vibe_chains_missed": 0,
+            "vibe_duration": 0,
+            "vibe_times": [],
+            "vibes": 0
+        },
+        {
+            "InputMults": [
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 1,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 0,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 5
+                }
+            ],
+            "average": 0.0039,
+            "base_score": 12654,
+            "cheated": false,
+            "create_epoch": 1784140637597,
+            "dnf": true,
+            "fc": false,
+            "holds_hit": 34,
+            "input_ratings": [
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 5
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
+                        }
+                    ],
+                    "MultiplierValue": 3
+                }
+            ],
+            "max_combo": 25,
+            "pfc": false,
+            "player_id": "cf28b32d-f05c-4292-bd1b-04713ec8a03c",
+            "player_name": "Lafima",
+            "score": 3632,
+            "total_goods": 0,
+            "total_greats": 0,
+            "total_misses": 1,
+            "total_oks": 0,
+            "total_perfects": 25,
+            "update_epoch": 1784140637597,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
