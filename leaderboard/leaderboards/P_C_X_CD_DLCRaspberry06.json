@@ -463,19 +463,27 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 5
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 42
                 }
             ],
-            "average": -0.0024,
-            "base_score": 16317,
+            "average": -0.009,
+            "base_score": 27639,
             "cheated": false,
             "create_epoch": 1781627989614,
             "dnf": true,
             "fc": false,
-            "holds_hit": 0,
+            "holds_hit": 12,
             "input_ratings": [
                 {
                     "InputRatingCountPairs": [
@@ -499,27 +507,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 5
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 3
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 42
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 3
+                    "MultiplierValue": 4
                 }
             ],
-            "max_combo": 25,
+            "max_combo": 72,
             "pfc": false,
             "player_id": "45e1cde8-7336-45d7-9bfc-0e72f0627bf4",
             "player_name": "Zyruvias",
-            "score": 2499,
+            "score": 13060,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 25,
-            "update_epoch": 1781628003530,
+            "total_perfects": 72,
+            "update_epoch": 1784751036855,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
