@@ -135,6 +135,7 @@ var all_charts = {
 	"DLCIcaco02":{ "name": "More"},
 	"DLCIcaco03":{ "name": "Villain"},
 	"DLCIcaco04":{ "name": "The Baddest"},
+	"DLCYuzu01":{ "name": "Sought (Among Us - Seek Remix)"},
 }
 
 var custom_name_styles = {
