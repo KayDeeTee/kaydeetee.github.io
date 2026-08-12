@@ -136,6 +136,11 @@ var all_charts = {
 	"DLCIcaco03":{ "name": "Villain"},
 	"DLCIcaco04":{ "name": "The Baddest"},
 	"DLCYuzu01":{ "name": "Sought (Among Us - Seek Remix)"},
+	"DLCLychee01":{ "name": "The Girl Who Glitched (Ai.Mi's Theme)"},
+	"DLCLychee02":{ "name": "Thousand Absolutes (Octavia's Theme)"},
+	"DLCLychee03":{ "name": "Curtain Call (Finii's Theme)"},
+	"DLCLychee04":{ "name": "Go Strike! (Juliette's Theme)"},
+	"DLCLychee05":{ "name": "Methods of Madness (Kazan's Theme)"},
 }
 
 var custom_name_styles = {
