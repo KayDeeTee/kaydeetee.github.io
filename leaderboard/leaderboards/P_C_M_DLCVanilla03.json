@@ -13023,19 +13023,19 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 1,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
                 },
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 10
+                    "perfects": 9
                 },
                 {
                     "goods": 0,
@@ -13047,29 +13047,38 @@
                 },
                 {
                     "goods": 0,
-                    "greats": 11,
+                    "greats": 21,
                     "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 248
+                    "perfects": 237
                 },
                 {
                     "goods": 0,
-                    "greats": 4,
+                    "greats": 0,
                     "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 50
+                    "perfects": 55
                 }
             ],
-            "average": -0.0019,
+            "average": 0.0099,
             "base_score": 114219,
             "cheated": false,
-            "create_epoch": 1777965086392,
+            "create_epoch": 1777693485334,
             "dnf": false,
             "fc": true,
             "holds_hit": 30,
             "input_ratings": [
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
                 {
                     "InputRatingCountPairs": [
                         {
@@ -13079,15 +13088,6 @@
                         {
                             "InputRating": "Great",
                             "NumberOfInputs": 1
-                        }
-                    ],
-                    "MultiplierValue": 1
-                },
-                {
-                    "InputRatingCountPairs": [
-                        {
-                            "InputRating": "Perfect",
-                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 2
@@ -13105,11 +13105,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 248
+                            "NumberOfInputs": 237
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 11
+                            "NumberOfInputs": 21
                         }
                     ],
                     "MultiplierValue": 4
@@ -13118,11 +13118,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 50
-                        },
-                        {
-                            "InputRating": "Great",
-                            "NumberOfInputs": 4
+                            "NumberOfInputs": 55
                         }
                     ],
                     "MultiplierValue": 8
@@ -13130,23 +13126,25 @@
             ],
             "max_combo": 343,
             "pfc": false,
-            "player_id": "b1c2d1dc-04e0-421d-a3ed-c0fbc8ba9c7c",
-            "player_name": "Cash Banooka",
-            "score": 841251,
+            "player_id": "5121b408-ca5a-48cd-8d6c-981ae3957dc9",
+            "player_name": "NuMetalSonic",
+            "score": 841420,
             "total_goods": 0,
-            "total_greats": 16,
+            "total_greats": 22,
             "total_misses": 0,
             "total_oks": 0,
-            "total_perfects": 327,
-            "update_epoch": 1777965645327,
+            "total_perfects": 321,
+            "update_epoch": 1787085167168,
             "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 20.1125,
+            "vibe_duration": 20.3989,
             "vibe_times": [
-                122.9765,
-                275.9039
+                60.0513,
+                120.96,
+                202.9942,
+                271.994
             ],
-            "vibes": 2
+            "vibes": 4
         }
     ],
     "vibe_chains": 4
