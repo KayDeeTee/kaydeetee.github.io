@@ -1054,14 +1054,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 352
+                    "perfects": 384
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 10
                 }
             ],
-            "average": 0.0019,
-            "base_score": 131535,
+            "average": 0.0008,
+            "base_score": 147519,
             "cheated": false,
             "create_epoch": 1743283095264,
             "dnf": true,
@@ -1099,32 +1107,43 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 352
+                            "NumberOfInputs": 384
+                        }
+                    ],
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 10
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 4
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 382,
+            "max_combo": 424,
             "pfc": false,
             "player_id": "080dcc9e-ced2-4e00-b306-d615f60a3425",
             "player_name": "Kerem",
-            "score": 82513,
+            "score": 94061,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 382,
-            "update_epoch": 1751312022133,
-            "vibe_chains_hit": 1,
+            "total_perfects": 424,
+            "update_epoch": 1787005038583,
+            "vibe_chains_hit": 2,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_duration": 1.4387,
+            "vibe_times": [
+                289.0005
+            ],
+            "vibes": 1
         }
     ],
     "vibe_chains": -1
