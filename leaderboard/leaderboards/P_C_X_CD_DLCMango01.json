@@ -844,16 +844,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 5
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 0
                 }
             ],
-            "average": 0.0051,
-            "base_score": 11322,
+            "average": -0.0066,
+            "base_score": 12987,
             "cheated": false,
-            "create_epoch": 1758249555743,
+            "create_epoch": 1788669893521,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -862,27 +870,32 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 5
-                        },
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 5,
+            "max_combo": 10,
             "pfc": false,
-            "player_id": "b6e20d73-88be-445e-b1c4-80e1cc3a5765",
-            "player_name": "edgeofdawnruby",
-            "score": 277,
+            "player_id": "03ed483f-a6b8-48e6-ac5d-d9653401a627",
+            "player_name": "cavalca",
+            "score": 556,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 5,
-            "update_epoch": 1758249578079,
+            "total_perfects": 10,
+            "update_epoch": 1788669915328,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
