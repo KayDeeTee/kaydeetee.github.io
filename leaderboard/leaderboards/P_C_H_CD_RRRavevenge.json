@@ -1109,16 +1109,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 210
+                    "perfects": 175
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 8,
+                    "oks": 0,
+                    "perfects": 27
                 }
             ],
-            "average": 0.001,
-            "base_score": 84915,
+            "average": 0.0016,
+            "base_score": 83250,
             "cheated": false,
-            "create_epoch": 1742588529171,
+            "create_epoch": 1789376048208,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -1154,32 +1162,44 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 210
+                            "NumberOfInputs": 175
+                        }
+                    ],
+                    "MultiplierValue": 4
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 27
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 4
+                    "MultiplierValue": 8
                 }
             ],
-            "max_combo": 240,
+            "max_combo": 232,
             "pfc": false,
-            "player_id": "072501e4-77b9-430b-b373-9991d676ba5c",
-            "player_name": "Birch",
-            "score": 49972,
+            "player_id": "a5db9708-ceff-4ec2-9793-719d8232a9f4",
+            "player_name": "BoltFromTheGreen",
+            "score": 54197,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 240,
-            "update_epoch": 1747714950097,
+            "total_perfects": 232,
+            "update_epoch": 1789376219003,
             "vibe_chains_hit": 2,
             "vibe_chains_missed": 0,
-            "vibe_duration": 0,
-            "vibe_times": [],
-            "vibes": 0
+            "vibe_duration": 7.2114,
+            "vibe_times": [
+                96.8591,
+                161.9173
+            ],
+            "vibes": 2
         }
     ],
     "vibe_chains": -1

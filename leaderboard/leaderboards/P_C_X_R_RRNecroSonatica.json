@@ -1288,20 +1288,20 @@
         {
             "InputMults": [
                 {
-                    "goods": 1,
-                    "greats": 8,
-                    "misses": 2,
+                    "goods": 0,
+                    "greats": 2,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 17
+                    "perfects": 11
                 },
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 2,
                     "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 20
+                    "perfects": 8
                 },
                 {
                     "goods": 0,
@@ -1309,27 +1309,27 @@
                     "misses": 0,
                     "mult": 3,
                     "oks": 0,
-                    "perfects": 20
-                },
-                {
-                    "goods": 4,
-                    "greats": 32,
-                    "misses": 0,
-                    "mult": 4,
-                    "oks": 0,
-                    "perfects": 681
+                    "perfects": 10
                 },
                 {
                     "goods": 0,
-                    "greats": 16,
+                    "greats": 34,
+                    "misses": 0,
+                    "mult": 4,
+                    "oks": 0,
+                    "perfects": 717
+                },
+                {
+                    "goods": 0,
+                    "greats": 19,
                     "misses": 0,
                     "mult": 8,
-                    "oks": 0,
-                    "perfects": 233
+                    "oks": 1,
+                    "perfects": 222
                 }
             ],
-            "average": 0.0016,
-            "base_score": 344322,
+            "average": 0.0041,
+            "base_score": 341658,
             "cheated": false,
             "create_epoch": 1754428023612,
             "dnf": false,
@@ -1340,18 +1340,10 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 17
+                            "NumberOfInputs": 11
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 8
-                        },
-                        {
-                            "InputRating": "Good",
-                            "NumberOfInputs": 1
-                        },
-                        {
-                            "InputRating": "Miss",
                             "NumberOfInputs": 2
                         }
                     ],
@@ -1361,7 +1353,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 20
+                            "NumberOfInputs": 8
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 2
                         }
                     ],
                     "MultiplierValue": 2
@@ -1370,7 +1366,7 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 20
+                            "NumberOfInputs": 10
                         }
                     ],
                     "MultiplierValue": 3
@@ -1379,15 +1375,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 681
+                            "NumberOfInputs": 717
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 32
-                        },
-                        {
-                            "InputRating": "Good",
-                            "NumberOfInputs": 4
+                            "NumberOfInputs": 34
                         }
                     ],
                     "MultiplierValue": 4
@@ -1396,35 +1388,39 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 233
+                            "NumberOfInputs": 222
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 16
+                            "NumberOfInputs": 19
+                        },
+                        {
+                            "InputRating": "Ok",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 985,
+            "max_combo": 1023,
             "pfc": false,
             "player_id": "b62ecd25-2b20-4f86-b696-b1f3eb18cb0e",
             "player_name": "Metashad",
-            "score": 2703878,
-            "total_goods": 5,
-            "total_greats": 56,
-            "total_misses": 2,
-            "total_oks": 0,
-            "total_perfects": 971,
-            "update_epoch": 1788977095071,
+            "score": 2708796,
+            "total_goods": 0,
+            "total_greats": 57,
+            "total_misses": 0,
+            "total_oks": 1,
+            "total_perfects": 968,
+            "update_epoch": 1789372956249,
             "vibe_chains_hit": 6,
             "vibe_chains_missed": 0,
-            "vibe_duration": 30.3496,
+            "vibe_duration": 30.3112,
             "vibe_times": [
-                96.3613,
-                180.3805,
-                223.7668,
-                328.8557
+                96.3329,
+                179.8179,
+                227.9174,
+                345.8217
             ],
             "vibes": 4
         }
