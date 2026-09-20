@@ -141,6 +141,12 @@ var all_charts = {
 	"DLCLychee03":{ "name": "Curtain Call (Finii's Theme)"},
 	"DLCLychee04":{ "name": "Go Strike! (Juliette's Theme)"},
 	"DLCLychee05":{ "name": "Methods of Madness (Kazan's Theme)"},
+	"DLCWatermelon01":{ "name": "My One and Oni"},
+	"DLCWatermelon02":{ "name": "Highlight"},
+	"DLCWatermelon03":{ "name": "CONNECT-COMMUNE"},
+	"DLCWatermelon04":{ "name": "Artifact"},
+	"DLCWatermelon05":{ "name": "Hello Builder"},
+	"DLCWatermelon06":{ "name": "Wonder Style"},
 }
 
 var custom_name_styles = {
