@@ -2112,11 +2112,11 @@
             "InputMults": [
                 {
                     "goods": 0,
-                    "greats": 0,
+                    "greats": 1,
                     "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 10
+                    "perfects": 9
                 },
                 {
                     "goods": 0,
@@ -2136,22 +2136,22 @@
                 },
                 {
                     "goods": 0,
-                    "greats": 59,
+                    "greats": 44,
                     "misses": 0,
                     "mult": 4,
-                    "oks": 0,
-                    "perfects": 776
+                    "oks": 2,
+                    "perfects": 790
                 },
                 {
-                    "goods": 0,
-                    "greats": 61,
+                    "goods": 1,
+                    "greats": 53,
                     "misses": 0,
                     "mult": 8,
                     "oks": 1,
-                    "perfects": 316
+                    "perfects": 322
                 }
             ],
-            "average": 0.0032,
+            "average": -0.0066,
             "base_score": 413919,
             "cheated": false,
             "create_epoch": 1770368600111,
@@ -2163,7 +2163,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 10
+                            "NumberOfInputs": 9
+                        },
+                        {
+                            "InputRating": "Great",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 1
@@ -2190,11 +2194,15 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 776
+                            "NumberOfInputs": 790
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 59
+                            "NumberOfInputs": 44
+                        },
+                        {
+                            "InputRating": "Ok",
+                            "NumberOfInputs": 2
                         }
                     ],
                     "MultiplierValue": 4
@@ -2203,11 +2211,15 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 316
+                            "NumberOfInputs": 322
                         },
                         {
                             "InputRating": "Great",
-                            "NumberOfInputs": 61
+                            "NumberOfInputs": 53
+                        },
+                        {
+                            "InputRating": "Good",
+                            "NumberOfInputs": 1
                         },
                         {
                             "InputRating": "Ok",
@@ -2221,21 +2233,21 @@
             "pfc": false,
             "player_id": "66fb1529-af80-47df-afdc-a6f33a2fbc17",
             "player_name": "sun0418880",
-            "score": 3529579,
-            "total_goods": 0,
-            "total_greats": 120,
+            "score": 3548398,
+            "total_goods": 1,
+            "total_greats": 98,
             "total_misses": 0,
-            "total_oks": 1,
-            "total_perfects": 1122,
-            "update_epoch": 1790390344861,
+            "total_oks": 3,
+            "total_perfects": 1141,
+            "update_epoch": 1790680181029,
             "vibe_chains_hit": 6,
             "vibe_chains_missed": 0,
-            "vibe_duration": 30.09,
+            "vibe_duration": 30.0658,
             "vibe_times": [
-                137.201,
-                169.1608,
-                457.2002,
-                649.0575
+                137.1021,
+                169.2229,
+                457.1457,
+                648.9879
             ],
             "vibes": 4
         },
