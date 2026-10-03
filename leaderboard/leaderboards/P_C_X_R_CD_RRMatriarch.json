@@ -760,22 +760,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 0,
+                    "misses": 1,
                     "mult": 4,
                     "oks": 0,
-                    "perfects": 103
+                    "perfects": 266
                 },
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 8,
                     "oks": 0,
-                    "perfects": 59
+                    "perfects": 123
                 }
             ],
-            "average": -0.0026,
-            "base_score": 67266,
+            "average": -0.0054,
+            "base_score": 143523,
             "cheated": false,
             "create_epoch": 1743283278194,
             "dnf": true,
@@ -813,7 +813,11 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 103
+                            "NumberOfInputs": 266
+                        },
+                        {
+                            "InputRating": "Miss",
+                            "NumberOfInputs": 1
                         }
                     ],
                     "MultiplierValue": 4
@@ -822,35 +826,33 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 59
-                        },
-                        {
-                            "InputRating": "Miss",
-                            "NumberOfInputs": 1
+                            "NumberOfInputs": 123
                         }
                     ],
                     "MultiplierValue": 8
                 }
             ],
-            "max_combo": 192,
+            "max_combo": 419,
             "pfc": false,
             "player_id": "080dcc9e-ced2-4e00-b306-d615f60a3425",
             "player_name": "Kerem",
-            "score": 52412,
+            "score": 117039,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 192,
-            "update_epoch": 1787334943357,
-            "vibe_chains_hit": 2,
+            "total_perfects": 419,
+            "update_epoch": 1790962510494,
+            "vibe_chains_hit": 4,
             "vibe_chains_missed": 0,
-            "vibe_duration": 10.0527,
+            "vibe_duration": 20.1497,
             "vibe_times": [
-                36.9668,
-                127.9765
+                36.9497,
+                127.6172,
+                156.9458,
+                243.9706
             ],
-            "vibes": 2
+            "vibes": 4
         },
         {
             "InputMults": [

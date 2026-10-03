@@ -633,14 +633,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 7
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 5
                 }
             ],
-            "average": -0.0004,
-            "base_score": 8325,
+            "average": 0.0093,
+            "base_score": 9324,
             "cheated": false,
             "create_epoch": 1776464491889,
             "dnf": true,
@@ -651,27 +659,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 7
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 5
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 7,
+            "max_combo": 15,
             "pfc": false,
             "player_id": "0a55c6f4-dd4e-4004-a1ae-86fa3ed7bdca",
             "player_name": "saithen57",
-            "score": 389,
+            "score": 1111,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 7,
-            "update_epoch": 1776464523809,
+            "total_perfects": 15,
+            "update_epoch": 1790529893596,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,

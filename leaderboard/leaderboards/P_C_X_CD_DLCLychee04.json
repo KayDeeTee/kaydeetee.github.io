@@ -962,16 +962,24 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 1,
                     "oks": 0,
-                    "perfects": 6
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 2,
+                    "oks": 0,
+                    "perfects": 3
                 }
             ],
-            "average": 0.0086,
-            "base_score": 9324,
+            "average": 0.005,
+            "base_score": 11988,
             "cheated": false,
-            "create_epoch": 1786402989685,
+            "create_epoch": 1790528974843,
             "dnf": true,
             "fc": false,
             "holds_hit": 0,
@@ -980,27 +988,36 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 6
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 1
+                },
+                {
+                    "InputRatingCountPairs": [
+                        {
+                            "InputRating": "Perfect",
+                            "NumberOfInputs": 3
                         },
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 1
+                    "MultiplierValue": 2
                 }
             ],
-            "max_combo": 6,
+            "max_combo": 13,
             "pfc": false,
-            "player_id": "09e96cf1-ee57-4fa5-9a6b-fe2e8beeb7fd",
-            "player_name": "Ehlyze",
-            "score": 333,
+            "player_id": "0a55c6f4-dd4e-4004-a1ae-86fa3ed7bdca",
+            "player_name": "saithen57",
+            "score": 889,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 6,
-            "update_epoch": 1786402989685,
+            "total_perfects": 13,
+            "update_epoch": 1790528974843,
             "vibe_chains_hit": 0,
             "vibe_chains_missed": 0,
             "vibe_duration": 0,
