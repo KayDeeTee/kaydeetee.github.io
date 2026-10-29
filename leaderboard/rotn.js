@@ -174,7 +174,7 @@ var cheat_blacklist = {
 }
 
 var cheat_exclude_board = {
-"DLCWatermelon03": "true",
+"P_C_X_DLCWatermelon03": "true",
 }
 
 
