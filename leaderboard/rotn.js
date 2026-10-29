@@ -175,6 +175,8 @@ var cheat_blacklist = {
 
 var cheat_exclude_board = {
 "P_C_X_DLCWatermelon03": "true",
+"P_C_M_DLCEggplant02":true,
+"P_C_H_DLCEggplant02":true,
 }
 
 
