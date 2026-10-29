@@ -657,6 +657,7 @@ function generate_leaderboards( json_objects ) {
 		for( s in lb.scores ){
 			var score = lb.scores[s]
 			score.rank = rank
+			score.board = lb.name
 
 			score.max_possible_hits = -1
 			score.max_possible_vibes = -1
@@ -698,6 +699,7 @@ function generate_leaderboards( json_objects ) {
 			var cheaters = 0
 			for( s in scores ){
 				var score = scores[s]
+				score.board = lb.name
 				var rel_score = (score.score-last_score.score)/diff
 
 				if( cheat_detect(score) ) cheaters += 1
