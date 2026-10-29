@@ -173,6 +173,11 @@ var cheat_blacklist = {
 "594a4463-222c-4991-a55f-b4315b42c574": "true",
 }
 
+var cheat_exclude_board = {
+"DLCWatermelon03": "true",
+}
+
+
 function formatted_player_name( player_id, player_name ){
 	pname = document.createElement("span")
 	if( player_name.startsWith( "<color=#187ea8>[DEV] </color>" ) ){
@@ -324,6 +329,9 @@ function cheat_detect( score ){
 	}
 	if( cheat_blacklist.hasOwnProperty(score.player_id) ){
 	return true
+	}
+	if( cheat_exclude_board.hasOwnProperty(score.board) ){
+	return false
 	}
 	if( score.cheated ){ 
 		console.log("python cheat detect")
