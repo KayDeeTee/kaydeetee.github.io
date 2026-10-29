@@ -147,6 +147,12 @@ var all_charts = {
 	"DLCWatermelon04":{ "name": "Artifact"},
 	"DLCWatermelon05":{ "name": "Hello Builder"},
 	"DLCWatermelon06":{ "name": "Wonder Style"},
+	"DLCOG14":{ "name": "Konga Conga Kappa"},
+	"DLCJuniper01":{ "name": "Freaking Out"},
+	"DLCJuniper02":{ "name": "Hellbent"},
+	"DLCJuniper03":{ "name": "Ghost"},
+	"DLCJuniper04":{ "name": "The Future"},
+	"DLCJuniper05":{ "name": "When I'm With You"},
 }
 
 var custom_name_styles = {
@@ -422,6 +428,7 @@ function generate_row_manual(leaderboard_table, rank, name, score, accuracy, det
 }
 
 function generate_row( leaderboard_table, score, rows, replace_name_with_board=false ){
+	console.log( score.board )
 	var is_cheater = cheat_detect( score )
 	score.cheated = is_cheater
 
