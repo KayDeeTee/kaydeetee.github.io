@@ -711,14 +711,22 @@
                 {
                     "goods": 0,
                     "greats": 0,
-                    "misses": 1,
+                    "misses": 0,
                     "mult": 2,
                     "oks": 0,
-                    "perfects": 9
+                    "perfects": 10
+                },
+                {
+                    "goods": 0,
+                    "greats": 0,
+                    "misses": 1,
+                    "mult": 3,
+                    "oks": 0,
+                    "perfects": 0
                 }
             ],
-            "average": 0.002,
-            "base_score": 9990,
+            "average": -0.001,
+            "base_score": 11322,
             "cheated": false,
             "create_epoch": 1762927399852,
             "dnf": true,
@@ -738,29 +746,34 @@
                     "InputRatingCountPairs": [
                         {
                             "InputRating": "Perfect",
-                            "NumberOfInputs": 9
-                        },
+                            "NumberOfInputs": 10
+                        }
+                    ],
+                    "MultiplierValue": 2
+                },
+                {
+                    "InputRatingCountPairs": [
                         {
                             "InputRating": "Miss",
                             "NumberOfInputs": 1
                         }
                     ],
-                    "MultiplierValue": 2
+                    "MultiplierValue": 3
                 }
             ],
-            "max_combo": 19,
+            "max_combo": 20,
             "pfc": false,
             "player_id": "79d57078-805b-425a-9102-85524f5996cd",
             "player_name": "LavaAgent",
-            "score": 1556,
+            "score": 1666,
             "total_goods": 0,
             "total_greats": 0,
             "total_misses": 1,
             "total_oks": 0,
-            "total_perfects": 19,
-            "update_epoch": 1762927416604,
+            "total_perfects": 20,
+            "update_epoch": 1795058829692,
             "vibe_chains_hit": 0,
-            "vibe_chains_missed": 0,
+            "vibe_chains_missed": 1,
             "vibe_duration": 0,
             "vibe_times": [],
             "vibes": 0
